@@ -1,0 +1,23 @@
+# 10- Appearance of Vector Layers
+
+Download the  [data](https://github.com/Azad77/Python_qgis/blob/main/Data/KRG_Cities.zip) 
+<p>Then, load the point type shapefile</p>
+```
+uri = "D:/Python_QGIS/data/KRG_Cities.shp"
+vlayer = iface.addVectorLayer(uri, "KRG_Cities", "ogr")```
+
+Change the size of the circle
+```
+vlayer.renderer().symbol().setSize(8)
+vlayer.triggerRepaint()```
+
+Change the color of the symbol
+```
+vlayer.renderer().symbol().setColor(QColor("green"))
+vlayer.triggerRepaint()```
+
+Change circles to other symbols
+```
+vlayer.renderer().symbol().symbolLayer(0).setShape(QgsSimpleMarkerSymbolLayerBase.Pentagon)
+vlayer.triggerRepaint()
+```

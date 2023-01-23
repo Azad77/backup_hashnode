@@ -20,7 +20,7 @@ from matplotlib.colors import ListedColormap
 
 Plotting one variable time variation:
 
-```xml
+```python
 # Load time series data at Github.
 df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/a10.csv', parse_dates=['date'], index_col='date')
 
@@ -72,7 +72,7 @@ plt.show()
 
 #### Plotting two variables time series:
 
-````xml
+````python
 ```python
 #### Plotting two variables time series:
 
@@ -142,7 +142,7 @@ plt.gca().set(ylabel='Value', xlabel='Indices') # set x and y labels
 
 Presenting categorical data by bar chart or bar graph.
 
-```xml
+```python
 sns.barplot(data=df1)
 plt.gca().set(ylabel='Value', xlabel='Indices')
 ```
@@ -151,7 +151,7 @@ plt.gca().set(ylabel='Value', xlabel='Indices')
 
 #### Stacked Barplot
 
-```xml
+```python
 import matplotlib.pyplot as plt
 labels = ['A', 'B', 'C', 'D', 'E']
 men_av = [23, 25, 33, 30, 18]
@@ -179,7 +179,7 @@ plt.show()
 
 Pairplot used to presents the distribution of variables and relationships between variables.
 
-```xml
+```python
 sns.pairplot(data=df2, hue='in_out')
 ```
 
@@ -189,7 +189,7 @@ sns.pairplot(data=df2, hue='in_out')
 
 Scatter plot shows the relationship between two variables.
 
-```xml
+```python
 sns.scatterplot(data=df2, x = 'employment',y= 'happiness', hue='in_out')
 plt.legend(title="", loc=8)
 ```
@@ -198,7 +198,7 @@ plt.legend(title="", loc=8)
 
 #### 3D Scatterplot
 
-```xml
+```python
 
 
 sns.set_style("whitegrid", {'axes.grid' : False})
@@ -209,7 +209,7 @@ ax = Axes3D(fig) # Method 1
 
 Create x, y, and z NumPy array data
 
-```xml
+```python
 X = np.array([0, 5, 10, 15, 20, 22, 26, 24, 14, 30])
 Y = np.array([0, 3, 6, 9, 12, 22, 24, 26, 30, 20])
 Z = np.array([3, 5, 11, 10, 12, 4, 5, 17, 10, 13])
@@ -217,14 +217,14 @@ Z = np.array([3, 5, 11, 10, 12, 4, 5, 17, 10, 13])
 
 Get colormap from seaborn
 
-```xml
+```python
 cmap = ListedColormap(sns.color_palette("husl", 256).as_hex())
 g = ax.scatter(X, Y, Z, c=X, s= 50, marker='o', cmap = cmap, alpha = 1)
 ```
 
 Set x, y and z labels
 
-```xml
+```python
 ax.set_xlabel('X Label')
 ax.set_ylabel('Y Label')
 ax.set_zlabel('Z Label')
@@ -232,7 +232,7 @@ ax.set_zlabel('Z Label')
 
 Add a color bar which maps values to colors.
 
-```xml
+```python
 fig.colorbar( g, shrink=0.5, aspect=5)
 plt.show()
 ```
@@ -243,7 +243,7 @@ plt.show()
 
 Load data (^DJI stooq) from Pandas datareader
 
-```xml
+```python
 data = pdr.DataReader('^DJI', 'stooq')# Data of ^DJI stooq market
 data
 data = data[-365:] # get the most recent 365 days data
@@ -253,20 +253,20 @@ volume = (15 * data.Volume[:-2] / data.Volume[0])**2
 
 Set color for 363 days from seaborn (color palette) library
 
-```xml
+```python
 colors = sns.color_palette("Set3", 363)
 ```
 
 Plotting to scatter plot:
 
-```xml
+```python
 fig, pl = plt.subplots()
 pl.scatter(delta1[:-1], delta1[1:], color=colors, s=volume, alpha = 0.5)
 ```
 
 Set x, y labels and title:
 
-```xml
+```python
 pl.set_xlabel(r'Δi', fontsize=12)
 pl.set_ylabel(r'Δi+1', fontsize=12)
 pl.xaxis.label.set_color('midnightblue')
@@ -277,7 +277,7 @@ pl.grid(True)
 
 Set x, y limittion
 
-```xml
+```python
 pl.axis([-0.025, 0.025, -0.025, 0.025]) # xlim , ylim
 fig.tight_layout()
 plt.show()
@@ -289,7 +289,7 @@ plt.show()
 
 Besides shows the relationship between dependent variable(Y) and independent variable(X), it disples the distribution of X and Y.
 
-```xml
+```python
 # Linear regression
 x = (1,3,5, 2, 9, 11)
 y = (2,4,6, 3, 8, 10)
@@ -301,7 +301,7 @@ plt.gca().set(ylabel='Y', xlabel='X')
 
 ### Piechart
 
-```xml
+```python
  
 # create data
 names='A', 'B', 'C', 'D',
@@ -316,7 +316,7 @@ plt.show()
 
 ### Boxplot
 
-```xml
+```python
 df = pd.read_csv (r'D:\Python\Python_for_Researchers\sar_data.csv', encoding='unicode_escape')
 df.head()
 
@@ -331,7 +331,7 @@ plt.gca().set(ylabel='Value', xlabel='Sensor')
 
 It represents the distribution of numerical data.
 
-```xml
+```python
 bio = [-2, 1, 2, 4, 2, 5, 5, 5,6 , 7, 9, 7, 5, 10, 15] # create data
 
 sns.set_style('darkgrid') # set grid style
@@ -464,7 +464,7 @@ If the variables are “categorical” (divided into discrete groups) it may be 
 
 Load titanic.csv file from load\_dataset function in Seaborn library.
 
-```xml
+```python
 titanic = sns.load_dataset("titanic") # load titanic csv file from seaborn lab
 
 g = sns.catplot(x='pclass', y="age",
@@ -477,7 +477,7 @@ plt.legend(title="Alive", loc=1) # Location: 'upper right':1
 
 #### Swarm Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic") # load data
 
 g = sns.catplot(x='pclass', y="age",
@@ -491,7 +491,7 @@ plt.legend(title="Alive", loc=9) # Location: 'upper center':9
 
 #### Boxen Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic")
 g = sns.catplot(x='pclass', y="age",
                 hue="alive",
@@ -504,7 +504,7 @@ plt.legend(title='Alive', loc = 9)
 
 #### Strip Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic")
 g = sns.catplot(x='pclass', y="age",
                 hue="alive",
@@ -518,7 +518,7 @@ plt.legend(title='Alive', loc = 9)
 
 #### Box Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic")
 g = sns.catplot(x='pclass', y="age",
                 hue="alive",
@@ -529,7 +529,7 @@ g = sns.catplot(x='pclass', y="age",
 
 #### Point Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic")
 g = sns.catplot(x='pclass', y="age",
                 hue="alive",
@@ -540,7 +540,7 @@ g = sns.catplot(x='pclass', y="age",
 
 #### Bar Catplot
 
-```xml
+```python
 titanic = sns.load_dataset("titanic")
 g = sns.catplot(x='pclass', y="age",
                 hue="alive",
@@ -551,7 +551,7 @@ g = sns.catplot(x='pclass', y="age",
 
 #### Count Catplot
 
-```xml
+```python
 sns.catplot( x='embark_town',
              kind="count",
              hue= "sex",

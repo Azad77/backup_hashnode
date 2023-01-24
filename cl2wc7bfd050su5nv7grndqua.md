@@ -1,6 +1,6 @@
 # 4- Write a view
 
-Open the file polls/views.py For example, we open "Sublime Text" software. From File&gt;New Folder&gt; we select: PollProject floder
+Open the file polls/views.py For example, we open "Sublime Text" software. From File&gt;New Folder&gt; we select: PollProject folder
 
 Then put the following Python code in polls/views.py:
 
@@ -33,3 +33,5 @@ Then open: PollProject/urls.py and past the following code in it: \`\`\` from dj
 urlpatterns = \[ path('polls/', include('polls.urls')), path('admin/', admin.site.urls), \] `Verify it’s working with the following command:` py manage.py runserver \`\`\`
 
 Then, go to http://localhost:8000/polls/ in your browser.
+
+If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

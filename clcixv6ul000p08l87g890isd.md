@@ -149,3 +149,5 @@ The index file is now should be looks like this:
 Now reload opened web page to inset the background image looks like that:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672912977561/423df376-ee8b-4e22-924a-a63526607496.png align="center")
+
+<p>* If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>

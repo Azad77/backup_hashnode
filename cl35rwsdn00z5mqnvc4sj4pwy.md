@@ -36,4 +36,6 @@ Reload http://localhost:8000/polls/ and you should see the background loaded in 
 For more details about the Django basic tutorial, go to the main source of this tutorial:
 https://docs.djangoproject.com/en/4.0/intro/tutorial06/
 
+<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
+
 

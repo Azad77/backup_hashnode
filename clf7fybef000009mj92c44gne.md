@@ -158,7 +158,7 @@ Once uploaded, your package should be viewable on PyPI; for example:
 To install the package you have uploaded, you may utilize pip and confirm its functionality:
 
 ```python
-pip install smartrs==0.0.1 
+pip install smartrs==0.0.1
 ```
 
 ```python
@@ -176,4 +176,10 @@ example.add_ten(5)
 
 Well done, you have successfully packaged and shared a Python project!
 
-For more information visit: [https://packaging.python.org/en/latest/tutorials/packaging-projects/](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+For more information visit:
+
+* [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+    
+* [Python Packages](https://www.tutorialsteacher.com/python/python-package)
+    
+* [How to create a Python package and publish it on PyPI in 5 minutes](https://www.youtube.com/watch?v=EIwLZiTuYoA)

@@ -1,8 +1,15 @@
-# 2- Install Python through Miniconda
+---
+title: "2- Install Python through Miniconda"
+datePublished: Sat Jun 26 2021 08:26:45 GMT+0000 (Coordinated Universal Time)
+cuid: ckqdi1wru09zigss16gi56r5q
+slug: 2-install-python-through-miniconda
+tags: tutorial, programming-blogs, python, research, learning
 
-There are many ways to install and run Python and its tools and libraries. In this learning series, we use "Miniconda" to install and run Python. Miniconda is a small version of Anaconda, which includes Python, conda, and a few packages including pip.
+---
 
-Firstly, \[download\](https://docs.conda.io/en/latest/miniconda.html) Miniconda. On the website choose a suitable version for your computer. For me, it is \*Miniconda 3 Windows 64-bit\*.
+There are various ways to install and run Python along with its tools and libraries. In this learning series, we will be using "Miniconda" to install and run Python. Miniconda is a smaller version of Anaconda that comes with Python, conda, and a few pre-installed packages, including pip.
+
+To get started, visit the [](https://docs.conda.io/en/latest/miniconda.html)[**Miniconda website**](https://docs.conda.io/en/latest/miniconda.html) and download the appropriate version for your computer. For example, I will be downloading "Miniconda 3 Windows 64-bit" for my computer.
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1624695025762/ePj4uRU51.png align="left")
 

@@ -1,6 +1,13 @@
-# 7- Control flow in Python
+---
+title: "7- Control flow in Python"
+datePublished: Sat Jun 26 2021 22:32:07 GMT+0000 (Coordinated Universal Time)
+cuid: ckqec92cc0g9bgss1aisk61o2
+slug: 7-control-flow-in-python
+tags: tutorial, python, research, learning, programming-languages
 
-The control flow in Python is set by loops, conditional statements, and function calls.
+---
+
+The control flow in Python is determined by loops, conditional statements, and function calls.
 
 #### if ... else
 
@@ -45,6 +52,6 @@ for x in "Python":
 
 Tip: for loops preferred over while loops.
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content.
+If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 
-To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

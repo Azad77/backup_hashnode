@@ -1,14 +1,23 @@
-# 5- Run a Python program
+---
+title: "5- Run a Python program"
+datePublished: Sat Jun 26 2021 10:26:54 GMT+0000 (Coordinated Universal Time)
+cuid: ckqdmcfhi0bpfd6s1exb893by
+slug: 5-run-a-python-program
+tags: tutorial, python, research, learning, programming-languages
 
-For short commands, we do not need to write scripts. We use command line: In the search window of Windows write:
+---
+
+For short commands, we do not need to write scripts. We use the command line:
+
+In the search window of Windows, write:
 
 ```python
 cmd
 ```
 
-Then click *Enter* to open command prompt.
+Then press *Enter* to open the command prompt.
 
-To open Python, inside the command prompt write:
+To open Python, inside the command prompt, write:
 
 ```python
 python
@@ -16,29 +25,31 @@ print("Hello World!")
 ### Hello World!
 ```
 
-To close the Python use:
+To close the Python, use:
 
 ```python
 exit()
 ```
 
-#### Write a simple python file
+#### To write a simple python file:
 
-Open Notepad, inside notepad, write: *print("Hello, World!")*, then save it as: helloworld.py
+Open Notepad, inside Notepad, write: `print("Hello, World!")`, then save it as [`helloworld.py`](http://helloworld.py).
 
-To run a python file on the command line: Change the directory to the folder (e.i. Python38) that includes the file. then we use command: python file-name.py
+To run a Python file on the command line: Change the directory to the folder (e.g., Python38) that includes the file, then use the command:
 
 ```python
 cd C:\Python38
-
 python helloworld.py
-### Hello, World!
 ```
 
-helloworld is the name of the file.
+Output:
+
+```python
+Hello, World!
+```
 
 Congratulations, you have written and executed your first Python program.
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content.
+If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 
-To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

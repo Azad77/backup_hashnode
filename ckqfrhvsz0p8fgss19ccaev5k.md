@@ -1,6 +1,13 @@
-# 12- Scientific computation using NumPy library
+---
+title: "12- Scientific computation using NumPy library"
+datePublished: Sun Jun 27 2021 22:26:39 GMT+0000 (Coordinated Universal Time)
+cuid: ckqfrhvsz0p8fgss19ccaev5k
+slug: 12-scientific-computation-using-numpy-library
+tags: tutorial, python, programming-languages, numpy
 
-In Python, NumPy (Numerical Python) is the essential package for scientific computation. It is used for working with arrays. An array in NumPy is very faster than traditional Python lists. It also could be used for computing Pearson’s correlation coefficient and generating random numbers.
+---
+
+In Python, NumPy (Numerical Python) is the essential package for scientific computation. It is used for working with arrays. An array in NumPy is very fast compared to traditional Python lists. It can also be used for computing Pearson’s correlation coefficient and generating random numbers.
 
 ## Installation of NumPy:
 
@@ -111,7 +118,7 @@ da
 
 ## Random numbers in NumPy
 
-Random denotes that numbers cannot be anticipated logically.
+Random means that numbers cannot be anticipated logically.
 
 ```python
 from numpy import random
@@ -131,7 +138,9 @@ print(rn)
 
 ## NaN values
 
-NaN - meaning Not a Number. If we multiply a NaN value by another value, we get NaN. To calculate sum, we can use *np.nansum* instead of *np.sum* in order to find the sum and avoid NaN:
+NaN means "Not a Number". If we multiply a NaN value by another value, we get NaN.
+
+To calculate the sum, we can use np.nansum instead of np.sum in order to find the sum and avoid NaN:
 
 ```python
 x = np.array([12,np.nan,31,56, 88, np.nan])
@@ -186,6 +195,6 @@ r[1, 1]
 # 1
 ```
 
-If you like the content, please [**SUBSCRIBE**](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future content.
+If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 
-To get full video tutorial and certificate, please, enroll in the course through this link: [**https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7**](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

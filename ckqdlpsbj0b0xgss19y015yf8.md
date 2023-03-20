@@ -1,6 +1,13 @@
-# 4- Install and run jupyter notebook platform
+---
+title: "4- Install and run jupyter notebook platform"
+datePublished: Sat Jun 26 2021 10:09:17 GMT+0000 (Coordinated Universal Time)
+cuid: ckqdlpsbj0b0xgss19y015yf8
+slug: 4-install-and-run-jupyter-notebook-platform
+tags: tutorial, python, research, learning, programming-languages
 
-To write and execute python codes you can use many platforms such as "jupyter notebook", "Spyder" and "Google Colab". In this learning series we use "jupyter notebook" platform.
+---
+
+To write and execute Python code, you can use many platforms, such as "Jupyter Notebook," "Spyder," and "Google Colab." In this learning series, we use the "Jupyter Notebook" platform.
 
 The Jupyter Notebook is a free web application for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
 
@@ -16,7 +23,7 @@ Then, we install jupyter notebook:
 conda install jupyter
 ```
 
-Look at the list of installed packaged to confirm jupyter notebook is installed:
+To confirm that Jupyter Notebook is installed, look at the list of installed packages:
 
 ```python
 conda list
@@ -42,12 +49,12 @@ In the opened Jupyter Notebook window, click on "Nbextentions", then select any 
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1624712028463/s5J0sqDSn.png align="left")
 
-To close jupyter notebook, inside conda mrompt use control and c.
+To close jupyter notebook, inside conda mrompt, use control and c.
 
 ```python
 ctrl+c
 ```
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content.
+If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 
-To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

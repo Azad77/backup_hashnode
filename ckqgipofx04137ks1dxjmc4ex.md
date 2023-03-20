@@ -1,6 +1,13 @@
-# 13- SciPy library
+---
+title: "13- SciPy library"
+datePublished: Mon Jun 28 2021 11:08:32 GMT+0000 (Coordinated Universal Time)
+cuid: ckqgipofx04137ks1dxjmc4ex
+slug: 13-scipy-library
+tags: tutorial, python, research, learning, programming-languages
 
-SciPy denotes Scientific Python and it is valuable for scientific analysis.
+---
+
+"SciPy" stands for "Scientific Python" and it is valuable for scientific analysis.
 
 #### SciPy installation:
 
@@ -10,19 +17,19 @@ pip install SciPy
 
 Examples of the functions in SciPy:
 
-* Integration: (scipy.integrate)
+* Integration: (`scipy.integrate`)
     
-* Optimization/Fitting: (scipy.optimize)
+* Optimization/Fitting: (`scipy.optimize`)
     
-* Interpolation: (scipy.interpolate)
+* Interpolation: (`scipy.interpolate`)
     
-* Signal Processing: (scipy.signal)
+* Signal Processing: (`scipy.signal`)
     
-* Spatial data structures and algorithms: (scipy.spatial)
+* Spatial data structures and algorithms: (`scipy.spatial`)
     
-* Statistics: (scipy.stats)
+* Statistics: (`scipy.stats`)
     
-* Multi-dimensional image processing: (scipy.ndimage)
+* Multi-dimensional image processing: (`scipy.ndimage`)
     
 
 #### Importing from SciPy
@@ -48,7 +55,7 @@ print(res)
 
 #### Statistical Description of Data
 
-```xml
+```python
 import numpy as np
 from scipy.stats import describe
 
@@ -61,29 +68,33 @@ print(res)
 
 #### Interpolation
 
-```xml
+```python
 import numpy as np
-x = np.array([0., 1.,5., 8., 10.])
+from scipy.interpolate import interp1d
+
+x = np.array([0., 1., 5., 8., 10.])
 y = np.array([0., 4., 1., 6., 8.])
 f = interp1d(x, y)
-f(3)
-# array(2.5)
+print(f(3))
+# 2.5
 ```
 
 #### Integration
 
-```xml
+```python
 import scipy.integrate
-f= lambda x:np.exp(x**1)
+import numpy as np
+
+f = lambda x: np.exp(x**1)
 # print results
-i = scipy.integrate.quad(f, 1, 2) # quad -- General purpose integration.
+i = scipy.integrate.quad(f, 1, 2) # quad -- General-purpose integration.
 print(i)
 # (4.670774270471606, 5.1856011379043454e-14)
 ```
 
 #### Input and Output
 
-Scipy.io package provides multiple methods to handle inputs and outputs of multiple formats such as:
+The [`scipy.io`](http://scipy.io) package provides multiple methods to handle inputs and outputs of multiple formats such as:
 
 * Matlab
     
@@ -98,7 +109,7 @@ Scipy.io package provides multiple methods to handle inputs and outputs of multi
 * Wave
     
 
-```xml
+```python
 import scipy.io as syio
   
 # Save the mat file
@@ -117,6 +128,6 @@ print(matf_contents)
 [('test', (1, 1), 'int32')]
 ```
 
-> If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content.
+> If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 > 
-> To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+> If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

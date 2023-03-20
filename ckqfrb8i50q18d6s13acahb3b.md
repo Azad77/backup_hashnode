@@ -1,24 +1,32 @@
-# 11- Directories and files
+---
+title: "11- Directories and files"
+datePublished: Sun Jun 27 2021 22:21:29 GMT+0000 (Coordinated Universal Time)
+cuid: ckqfrb8i50q18d6s13acahb3b
+slug: 11-directories-and-files
+tags: tutorial, python, research, learning, programming-languages
+
+---
 
 os module functions:
 
-* **os.getcwd()** obtains current working directory
+* * **os.getcwd()**: obtains the current working directory.
+        
+    * **os.chdir(dir)**: changes the current working directory to dir.
+        
+    * **os.listdir(dir=".")**: lists files in the directory dir.
+        
+    * **os.path.exists(path)**: checks whether the path exists.
+        
     
-* **os.chdir(dir)** changes current working directory to dir
+    To print the current directory:
     
-* **os.listdir(dir=".")** list files in directory dir
-    
-* **os.path.exists(path)** checks whether path exists
-    
-
-Print current directory:
 
 ```python
 import os # import modules
 print (os.getcwd()) # e.g., "C:\Users\Azad"
 ```
 
-Change the current directory to the home directory:
+To change the current directory to the home directory:
 
 ```python
 import os, os. path # import modules
@@ -27,13 +35,13 @@ print(home_dir)
 os.chdir (home_dir )
 ```
 
-List all files in the home directory:
+To list all files in the home directory:
 
 ```python
 print(os.listdir()) 
 # ['$netrc', '.anaconda', '.bash_history', '.bundle', ...]
 ```
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future content.
+If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 
-To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

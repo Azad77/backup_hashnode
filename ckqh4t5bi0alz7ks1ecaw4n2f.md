@@ -1,24 +1,37 @@
-# 14- Plotting in Python
+---
+title: "14- Plotting in Python"
+datePublished: Mon Jun 28 2021 21:27:05 GMT+0000 (Coordinated Universal Time)
+cuid: ckqh4t5bi0alz7ks1ecaw4n2f
+slug: 14-plotting-in-python
+tags: tutorial, python, research, learning, programming-languages
 
-In this tutorial, you learn to plot lineplot, barplot, pairplot, scatterplot, jointplot, piechart, boxplot, histogram, animated plot, different types of catplot (categorical plot). We use matplotlib, seaborn, and other libraries.
+---
 
-Firstly, download used data in this tutorial: [london\_borough\_profiles1.csv](https://github.com/Azad77/py4researchers/blob/main/data/london_borough_profiles1.csv) , [myPub.csv](https://github.com/Azad77/py4researchers/blob/main/data/myPub.csv) , and [sar\_data.csv](https://github.com/Azad77/py4researchers/blob/main/data/sar_data.csv)
+In this tutorial, you will learn how to plot different types of visualizations such as line plots, bar plots, pair plots, scatter plots, joint plots, pie charts, box plots, histograms, animated plots, and various types of categorical plots using libraries such as Matplotlib, Seaborn, and others.
 
-### Import libraries
+First, download the datasets that we will be using in this tutorial: [**london\_borough\_profiles1.csv**](https://github.com/Azad77/py4researchers/blob/main/data/london_borough_profiles1.csv), [**myPub.csv**](https://github.com/Azad77/py4researchers/blob/main/data/myPub.csv), and [**sar\_data.csv**](https://github.com/Azad77/py4researchers/blob/main/data/sar_data.csv).
+
+### **Importing libraries**
 
 ```python
-# Import libraries and functions
-
-import re, seaborn as sns, numpy as np, pandas as pd, random, matplotlib as mpl, matplotlib.pyplot as plt, matplotlib.cbook as cbook, pandas_datareader as pdr
+import re
+import numpy as np
+import pandas as pd
+import random
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import matplotlib.cbook as cbook
+import seaborn as sns
+import pandas_datareader as pdr
 
 from pylab import *
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.colors import ListedColormap
 ```
 
-### Timeplot (time series)
+### **Time plot (time series)**
 
-Plotting one variable time variation:
+To plot the time variation of a single variable, use the following code:
 
 ```python
 # Load time series data at Github.
@@ -32,12 +45,13 @@ def tplot(df, x, y, title="", xlabel='Date', ylabel='Value', dpi=300):
     plt.show()
 
 tplot(df, x=df.index, y=df.value, title='Anti-diabetic sales in Australia from 1992 to 2008.')
-plt.show()
 ```
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625413998286/znQRaHuNl.png align="left")
 
-#### Seasonal Plot of a Time Series
+#### Seasonal plot of a time series
+
+To plot a seasonal plot of a time series, use the following code:
 
 ```python
 
@@ -64,7 +78,7 @@ for i, y in enumerate(years):
 # Decoration
 plt.gca().set(xlim=(-0.3, 11), ylim=(2, 30), ylabel='Drug Sales', xlabel='Month')
 plt.yticks(fontsize=12, alpha=.7)
-plt.title("Seasonal plot of time series", fontsize=18)
+plt.subtitle("Seasonal plot of time series", fontsize=18)
 plt.show()
 ```
 
@@ -72,9 +86,7 @@ plt.show()
 
 #### Plotting two variables time series:
 
-````python
 ```python
-#### Plotting two variables time series:
 
 rs = np.random.RandomState(365) # create data
 values = rs.randn(365, 2).cumsum(axis=0)
@@ -83,7 +95,7 @@ data = pd.DataFrame(values, dates, columns=["A", "B"])
 data = data.rolling(7).mean()
 
 sns.lineplot(data=data, palette="tab10", linewidth=2.5)
-````
+```
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625140794221/VH1nBCJqf.png align="left")
 
@@ -110,7 +122,7 @@ Swarmplot used to display distribution of attributes.
 
 # Import csv file of data
 
-df = pd.read_csv (r'D:\Python\Python_for_Researchers\london_borough_profiles1.csv', encoding='unicode_escape')
+df = pd.read_csv ('D:/Python/Python_for_Researchers/london_borough_profiles1.csv', encoding='unicode_escape')
 df.head()
 
 
@@ -140,7 +152,7 @@ plt.gca().set(ylabel='Value', xlabel='Indices') # set x and y labels
 
 ### Barplot
 
-Presenting categorical data by bar chart or bar graph.
+A bar chart or bar graph is used to present categorical data.
 
 ```python
 sns.barplot(data=df1)
@@ -177,7 +189,7 @@ plt.show()
 
 ### Pairplot
 
-Pairplot used to presents the distribution of variables and relationships between variables.
+Pairplot is used to present the distribution of variables and relationships between variables.
 
 ```python
 sns.pairplot(data=df2, hue='in_out')
@@ -187,7 +199,7 @@ sns.pairplot(data=df2, hue='in_out')
 
 ### Scatterplot
 
-Scatter plot shows the relationship between two variables.
+A scatter plot shows the relationship between two variables.
 
 ```python
 sns.scatterplot(data=df2, x = 'employment',y= 'happiness', hue='in_out')
@@ -207,7 +219,7 @@ ax = Axes3D(fig) # Method 1
 #ax = fig.add_subplot(111, projection='3d') # Method 2
 ```
 
-Create x, y, and z NumPy array data
+Create x, y, and z NumPy array data.
 
 ```python
 X = np.array([0, 5, 10, 15, 20, 22, 26, 24, 14, 30])
@@ -215,14 +227,14 @@ Y = np.array([0, 3, 6, 9, 12, 22, 24, 26, 30, 20])
 Z = np.array([3, 5, 11, 10, 12, 4, 5, 17, 10, 13])
 ```
 
-Get colormap from seaborn
+Get a colormap from the seaborn library.
 
 ```python
 cmap = ListedColormap(sns.color_palette("husl", 256).as_hex())
 g = ax.scatter(X, Y, Z, c=X, s= 50, marker='o', cmap = cmap, alpha = 1)
 ```
 
-Set x, y and z labels
+Set x, y, and z labels
 
 ```python
 ax.set_xlabel('X Label')
@@ -230,7 +242,7 @@ ax.set_ylabel('Y Label')
 ax.set_zlabel('Z Label')
 ```
 
-Add a color bar which maps values to colors.
+Add a color bar that maps values to colors.
 
 ```python
 fig.colorbar( g, shrink=0.5, aspect=5)
@@ -239,9 +251,9 @@ plt.show()
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625141692683/oUPcQrzzV.png align="left")
 
-#### Scatter plot with varying marker colors and sizes
+#### Use varying marker colors and sizes for the scatter plot.
 
-Load data (^DJI stooq) from Pandas datareader
+#### Load data from Pandas Datareader using the (^DJI stooq) function.
 
 ```python
 data = pdr.DataReader('^DJI', 'stooq')# Data of ^DJI stooq market
@@ -251,7 +263,7 @@ delta1 = np.diff(data.Close) / data.Close[:-1] # price of close day / price of c
 volume = (15 * data.Volume[:-2] / data.Volume[0])**2
 ```
 
-Set color for 363 days from seaborn (color palette) library
+Set colors for 363 days from the seaborn library's color palette.
 
 ```python
 colors = sns.color_palette("Set3", 363)
@@ -264,7 +276,7 @@ fig, pl = plt.subplots()
 pl.scatter(delta1[:-1], delta1[1:], color=colors, s=volume, alpha = 0.5)
 ```
 
-Set x, y labels and title:
+Set x, y labels, and title:
 
 ```python
 pl.set_xlabel(r'Δi', fontsize=12)
@@ -275,7 +287,7 @@ pl.set_title('Scatter plot of ^DJI stooq with volume and price change')
 pl.grid(True)
 ```
 
-Set x, y limittion
+Set x, y limitations
 
 ```python
 pl.axis([-0.025, 0.025, -0.025, 0.025]) # xlim , ylim
@@ -287,7 +299,7 @@ plt.show()
 
 ### Jointplot
 
-Besides shows the relationship between dependent variable(Y) and independent variable(X), it disples the distribution of X and Y.
+In addition to showing the relationship between the dependent variable (Y) and independent variable (X), it displays the distribution of X and Y.
 
 ```python
 # Linear regression
@@ -387,9 +399,7 @@ for i in data.Year.unique():
     plt.savefig(fname=filename, dpi=96)
     plt.gca()
     plt.close(fig)
-# conver to gif video online: https://gifmaker.me/
-# After a list of png figures downloaded to your computer,  
-# you can convert them to gif video online, for example in this webste: https://gifmaker.me/
+# To convert a list of png figures to a gif video online, use a website such as https://gifmaker.me/.
 ```
 
 ![Webp.net-gifmaker (4).gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1648405976422/eEN16VPKb.gif align="left")
@@ -458,11 +468,11 @@ for i in data.year.unique():
 
 ### Categorical data (catplot)
 
-If the variables are “categorical” (divided into discrete groups) it may be advantageous to use catplot. We can change the plot type by change: "kind" to violin, swarm, boxen, strip, box, point, bar or count.
+If the variables are "categorical" (divided into discrete groups), it may be advantageous to use catplot. We can change the plot type by changing the "kind" parameter to violin, swarm, boxen, strip, box, point, bar, or count.
 
 #### Violin Catplot
 
-Load titanic.csv file from load\_dataset function in Seaborn library.
+Load the titanic.csv file using the load\_dataset function from the Seaborn library.
 
 ```python
 titanic = sns.load_dataset("titanic") # load titanic csv file from seaborn lab
@@ -566,6 +576,6 @@ plt.legend(title="Gender", loc=9) # Location: 'upper center':9
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625141468572/_1ovU-iKC.png align="left")
 
-> If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content.
+> If you find this content helpful, please consider [SUBSCRIBING](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA) to my channel for future updates.
 > 
-> To get full video tutorial and certificate, please, enroll in the course through this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)
+> If you would like to get the full video tutorial and a certificate, you can enroll in the course by following this link: [https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7](https://www.udemy.com/course/python-for-researchers/?referralCode=886CCF5C552567F1C4E7)

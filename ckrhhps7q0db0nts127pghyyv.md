@@ -1,14 +1,28 @@
-# 15- Animated graphs in R programming
+---
+title: "15- Animated graphs in R programming"
+datePublished: Sat Jul 24 2021 08:08:06 GMT+0000 (Coordinated Universal Time)
+cuid: ckrhhps7q0db0nts127pghyyv
+slug: 15-animated-graphs-in-r-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1627118233398/ZjWwTDiJi.gif
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1627114026910/mgYlFsGF9.gif
+tags: tutorial, r, research, graphics, programming-languages
 
-Download used dataset in the tutorial: 
--  [Erbil_Rain_Annual.csv](https://github.com/Azad77/py4researchers/blob/main/data/Erbil_Rain_Annual.csv) 
--  [LULC_Change.csv](https://github.com/Azad77/py4researchers/blob/main/data/LULC_Change.csv)
--  [Climatic_Variables_and_Lag7R0_Australia.csv](https://github.com/Azad77/py4researchers/blob/main/data/Climatic_Variables_and_Lag7R0_Australia.csv) 
- 
+---
+
+Download the used datasets in the tutorial:
+
+* [**Erbil\_Rain\_Annual.csv**](https://github.com/Azad77/py4researchers/blob/main/data/Erbil_Rain_Annual.csv)
+    
+* [**LULC\_Change.csv**](https://github.com/Azad77/py4researchers/blob/main/data/LULC_Change.csv)
+    
+* [**Climatic\_Variables\_and\_Lag7R0\_Australia.csv**](https://github.com/Azad77/py4researchers/blob/main/data/Climatic_Variables_and_Lag7R0_Australia.csv)
+    
+
 **Animated timeline**
 
 Load libraries
-```
+
+```r
 library(ggplot2)
 library(gganimate)
 library(tidyr)
@@ -23,8 +37,10 @@ library(ggExtra)
 library(magick)
 library(av)
 ```
+
 Animated wind timeline using 'airquality' data:
-```
+
+```r
 #View(airquality)
 month<- factor(airquality$Month)
 p <- ggplot(airquality,aes(Day, Wind, group = Month, color = month)) +
@@ -38,22 +54,26 @@ p
 p + transition_reveal(Day)
 ```
 
-![animated_wind.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627120206176/fdd8YPhgs.gif)
+![animated_wind.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627120206176/fdd8YPhgs.gif align="left")
 
 Animated rain timeline:
 
 Load data:
-```
+
+```r
 df <- read.csv('D://R4Researchers//Erbil_Rain_Annual.csv')
 #View(df)
 ```
+
 Convert wide to long dataframe:
-```
+
+```r
 dflong <- gather(df, Station, Rain, Qushtapa:Shorsh)
 ```
 
 Create graph:
-```
+
+```r
 p1<- ggplot(dflong, aes(x=year,y=Rain,color=Station, group=Station))+
   geom_line(lwd=1.3, show.legend = T)+
   geom_point(size=3, show.legend = T) +
@@ -62,30 +82,37 @@ p1<- ggplot(dflong, aes(x=year,y=Rain,color=Station, group=Station))+
   ylab('Rain (mm)')
 p1
 ```
-Animate plot using transition_reveal() function:
-```
+
+Animate plot using transition\_reveal() function:
+
+```r
 anim<- p1 + transition_reveal(year)
 animate(anim, height = 400, width =600)
 ```
+
 Save the graph:
-```
+
+```r
 anim_save("animate_prece_Erbil_new_400&600.gif")
 ```
-![animate_prece_Erbil_new_400&600.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627121070019/y50Jxm5rj.gif)
 
-**Animated geom_col**
+![animate_prece_Erbil_new_400&600.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627121070019/y50Jxm5rj.gif align="left")
 
+**Animated geom\_col**
 
 Import data:
-```
+
+```r
 da<-read.csv("D:\\R4Researchers\\LULC_Change.csv")
 da1<- da[,1]
 da2<- da[,2]
 da3<- da[,3]
-da3 <- as.factor(da3) 
+da3 <- as.factor(da3)
 ```
-Create the graph using 'geom_col':
-```
+
+Create the graph using 'geom\_col':
+
+```r
 p <- ggplot(da, aes(x = da1, y = da2)) +
   geom_col(aes( fill = Class), position = position_dodge(0.8), width = 0.7,show.legend =F) +
   xlab("Land use/cover category")+
@@ -93,15 +120,19 @@ p <- ggplot(da, aes(x = da1, y = da2)) +
   theme_bw() 
 p
 ```
+
 Add text to the graph:
-```
+
+```r
 p1<- p + geom_text(data = da,
          aes(x = da1, group=da3, y = da2+2, 
          label = format(da2, nsmall = 0, digits=3, scientific = FALSE)), 
          color="black", position=position_dodge(.8), hjust=.5)
 ```
-Animate the graph using transition_states() function:
-```
+
+Animate the graph using `transition_states()` function:
+
+```r
 anim<- p1 + transition_states(year, wrap = T)+
   labs(title = "Year: {closest_state}", y = 'Class %', x= 'Class')
 
@@ -109,10 +140,9 @@ animate(anim, height = 400, width =600)
 anim_save("animate_barplot_LULC_Change_new.gif")
 ```
 
-![animate_barplot_LULC_Change_new.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627129346875/FOyBXDYRL.gif)
+![animate_barplot_LULC_Change_new.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627129346875/FOyBXDYRL.gif align="left")
 
-
-```
+```r
 
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
@@ -127,17 +157,20 @@ anim
 
 anim_save("animate_boxplot_covid_Australia.gif")
 ```
-![animate_geom_col_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627155149461/KH6p0slO8.gif)
+
+![animate_geom_col_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627155149461/KH6p0slO8.gif align="left")
 
 **Animated boxplot**
 
-
 Load data:
-```
+
+```r
 dt <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 ```
+
 Create boxplot:
-```
+
+```r
 p1<-ggplot(dt)+
   geom_boxplot(aes(y= lag7R0, x=area , fill =area),show.legend = F) +
   theme_bw() +
@@ -145,48 +178,61 @@ p1<-ggplot(dt)+
   coord_cartesian(ylim = c(0,32.2))
 p1
 ```
-Animate the plot using 'transition_time()' function:
-```
+
+Animate the plot using `transition_time()` function:
+
+```r
 anim<- p1 + transition_time(month) +
   labs(title = "Month: {frame_time}", y = 'R0 COVID-19', x= 'States') # using frmae_time for title
 animate(anim, height = 400, width =600)
 ```
+
 Save the gif:
-```
+
+```r
 anim_save("animate_boxplot_covid_Australia.gif")
 ```
-![animate_boxplot_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627124851370/rCmfT7FCs.gif)
+
+![animate_boxplot_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627124851370/rCmfT7FCs.gif align="left")
 
 **Animated violin**
 
-View 'mtcars' data as table:
-```
+View `mtcars` data as table:
+
+```r
 View(mtcars)
 CYL <- factor(mtcars$cyl)
 ```
+
 Create the graph:
-```
+
+```r
 p1 <- ggplot(mtcars, aes(CYL, mpg))+
   geom_violin(aes(fill = CYL))+
   theme_bw()+
   theme(legend.position = "top")
 p1
 ```
-Animate the graph with 'transition_states()' function:
-```
+
+Animate the graph with `transition_states()` function:
+
+```r
 anim<- p1 + transition_states(gear,transition_length = 3, state_length = .5, wrap = T) +
   labs(title = "Gear: {closest_state}", y = '', x= '')
 animate(anim, height = 600, width =600)
 ```
-Save the gif:
-```
-anim_save("animate_geom_violin.gif")
 
+Save the gif:
+
+```r
+anim_save("animate_geom_violin.gif")
 ```
-![animate_geom_violin.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627126120310/ANO8nhhOS.gif)
+
+![animate_geom_violin.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627126120310/ANO8nhhOS.gif align="left")
 
 **Animated jitter plot**
-```
+
+```r
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
 p1<-ggplot(df)+
@@ -202,12 +248,12 @@ anim_save("animate_geom_jitter_covid_Australia.gif")
 b <- animate(anim, duration = 20, fps = 20, renderer = av_renderer())
 anim_save("animate_geom_jitter.mp4", b) # save as mp4
 ```
-![animate_geom_jitter_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627126669039/ZF4SWAiCy.gif)
 
+![animate_geom_jitter_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627126669039/ZF4SWAiCy.gif align="left")
 
+**Animated geom\_count**
 
-**Animated geom_count**
-```
+```r
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
 p1<-ggplot(df)+
@@ -223,10 +269,11 @@ anim
 anim_save("animate_geom_count_covid_Australia.gif")
 ```
 
-![animate_geom_count_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627148015853/8RIzrLPCt.gif)
+![animate_geom_count_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627148015853/8RIzrLPCt.gif align="left")
 
-** Multiple area animated scatterplot**
-```
+**Multiple area animated scatterplot**
+
+```r
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 lag <- df$lag7R0*3
 
@@ -244,9 +291,12 @@ anim1
 
 anim_save("animate_sactterplot_Australia_Tempwrature.gif")
 ```
-![animate_sactterplot_Australia_Tempwrature.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627131599101/9swNuzfO8.gif)
+
+![animate_sactterplot_Australia_Tempwrature.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627131599101/9swNuzfO8.gif align="left")
+
 **Animated scatterplot**
-```
+
+```r
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
 p2<- ggplot(df)+
@@ -262,10 +312,12 @@ anim1<- animate(pp2, fps=2, height = 450, width =700)
 
 anim_save("animate_sactterplot_Australia_Tempwrature_one.gif")
 ```
-![animate_sactterplot_Australia_Tempwrature_one.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627133370114/Wuy_JE6s1.gif)
+
+![animate_sactterplot_Australia_Tempwrature_one.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627133370114/Wuy_JE6s1.gif align="left")
 
 **Animated map**
-```
+
+```r
 
 world <- ne_countries(scale = "medium", returnclass = "sf")
 #View(world)
@@ -284,10 +336,12 @@ anim <- gg +  transition_manual(frames = income_grp, cumulative = F)+ #transitio
 animate(anim, height = 400, width =600)
 anim_save("animate_geom_map_pop_Income.gif")
 ```
-![animate_geom_map_pop_Income.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627133878908/efWGwIRIp.gif)
+
+![animate_geom_map_pop_Income.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627133878908/efWGwIRIp.gif align="left")
 
 **Animated linerange**
-```
+
+```r
 
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 std <- function(x) sd(x)/sqrt(length(x))
@@ -314,10 +368,12 @@ animate(anim,fps = 4, height = 400, width =600)
 
 anim_save("animate_geom_linerange_Australia.gif")
 ```
-![animate_geom_linerange_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627145713621/diIyD-VO5.gif)
 
-**Animated bin hex **
-```
+![animate_geom_linerange_covid_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627145713621/diIyD-VO5.gif align="left")
+
+**Animated bin hex**
+
+```r
 
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
@@ -334,10 +390,12 @@ anim <- p + transition_time(month) +
 animate(anim,fps = 2, height = 400, width =600)
 anim_save("animate_stat_bin_hex_Australia.gif")
 ```
-![animate_stat_bin_hex_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627147670223/GnHDfgFaC.gif)
 
-** Animated dotplot**
-```
+![animate_stat_bin_hex_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627147670223/GnHDfgFaC.gif align="left")
+
+**Animated dotplot**
+
+```r
 df <- read.csv('D://R4Researchers//Climatic_Variables_and_Lag7R0_Australia.csv')
 
 p1<- ggplot(df, aes(y = air_temp,x= ws, fill = area),show.legend = F, alpha=0.6) +
@@ -351,10 +409,12 @@ animate(anim, height = 500, width =500)
 
 anim_save("animate_geom_dotplot_Australia.gif")
 ```
-![animate_geom_dotplot_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627149541217/RE_dedcf5.gif)
 
-**Animated geom_segment **
-```
+![animate_geom_dotplot_Australia.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627149541217/RE_dedcf5.gif align="left")
+
+**Animated geom\_segment**
+
+```r
 
 # Dataset 1: one value per group
 data <- data.frame(
@@ -378,10 +438,12 @@ anim
 
 anim_save("animated_geom_segment.gif")
 ```
-![animated_geom_segment.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627155887154/jpYBJfmsQ.gif)
+
+![animated_geom_segment.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627155887154/jpYBJfmsQ.gif align="left")
 
 **Animated pie chart**
-```
+
+```r
 #Load data:
 df<-read.csv("D:\\R4Researchers\\LULC_Change.csv")
 df
@@ -405,31 +467,9 @@ anim
 #Save gif:
 anim_save("animate_pie_chart_LULC_Chane.gif")
 ```
-![animate_pie_chart_LULC_Chane_500_500.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627158829784/oGjtcJaCG.gif)
-**Animated like r coding**
-```
 
+![animate_pie_chart_LULC_Chane_500_500.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627158829784/oGjtcJaCG.gif align="left")
 
-Azad<- image_read("https://publons.com/media/thumbs/academic/photos/680cac60-76d2-493e-a283-41e402d9a992.jpg.200x200_q95_crop_detail_upscale.jpg")
-rgif<- image_read('https://media1.tenor.com/images/be5edc14e0126d43fd7b739e9cbc82f4/tenor.gif?itemid=16753306')
-rgif <- image_scale(rgif, "650")
-logo <- image_read("https://jeroen.github.io/images/Rlogo.png")
-lov<- image_read("http://www.iamtudor.org/wp-content/uploads/2017/08/cropped-lovecoding.png")
-img <- c(logo, Azad, lov)
-img <- image_scale(img, "100x100")
+If you enjoy the content, please consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
 
-# Combine and flatten frames:
-frames <- image_composite(banana,img,  offset = "+1+1")
-
-# Turn frames into animation
-animation <- image_animate(frames, fps = 10, optimize = TRUE)
-print(animation)
-```
-![I_love_R_Coding.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627174443068/O_VMbsaJa.gif)
-
-<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
-
-To get full video tutorial and certificate, please, enroll in the course through this link:
-https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A
-
-
+To access video tutorials and receive a certificate, enroll in my [Udemy course](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A).

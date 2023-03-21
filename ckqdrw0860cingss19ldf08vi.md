@@ -73,7 +73,7 @@ type(color) # class 'tuple'
 2- List: `list`
 
 ```python
-Color = [“red”, “blue”, “green”]
+Color = ["red", "blue", "green"]
 type(Color) # class 'list'
 ```
 

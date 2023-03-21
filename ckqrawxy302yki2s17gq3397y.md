@@ -352,7 +352,7 @@ print(resultent, trendp)
 # 0.008014705882353073 0.12823529411764917
 ```
 
-#### References that helped me write my tutorial series:
+#### References that helped me while writing my tutorial series
 
 * [Getting started with Python for science](https://scipy-lectures.org/intro/)
     

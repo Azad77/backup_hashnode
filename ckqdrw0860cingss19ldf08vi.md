@@ -51,7 +51,7 @@ type(isFactor) # class 'bool'
 
 ```python
 name = "Anas"
-type(name) class 'str'
+type(name) # class 'str'
 ```
 
 6- Nothing: `NoneType`

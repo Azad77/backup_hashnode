@@ -1,9 +1,17 @@
-# 8- Descriptive statistics in R programming
+---
+title: "8- Descriptive statistics in R programming"
+datePublished: Mon Jul 19 2021 14:56:03 GMT+0000 (Coordinated Universal Time)
+cuid: ckrar35sf0rhnz6s12ip5bwgq
+slug: 8-descriptive-statistics-in-r-programming
+tags: tutorial, r, research, programming-languages, learn-coding
 
-Download  [data](https://github.com/Azad77/py4researchers/blob/main/data/columbus.csv)  used in this tutorial.
+---
 
-Install packages and call libraries:
-```
+Download [data](https://github.com/Azad77/py4researchers/blob/main/data/columbus.csv) used in this tutorial.
+
+Install packages and load libraries:
+
+```r
 install.packages(c('psych', 'Hmisc', 'janitor'))
 
 # Call libraries:
@@ -11,24 +19,32 @@ library(psych)
 library(Hmisc)
 library(janitor)
 ```
+
 Read csv data:
-```
+
+```r
 d <- read.csv('D://R4Researchers//columbus.csv')
 d
 ```
+
 Create data frame:
-```
+
+```r
 dt<- data.frame(x=c(1,3,5), y=c(2,4,6))
 ```
-Clean names:
-```
+
+Clean column names:
+
+```r
 d<-d %>%
      clean_names(case = "title") # Only the first letter of names will be in capital letter
 d<- clean_names(d) # to convert names to lowercase and clean them.
 View(d)
 ```
+
 #### Common descriptive functions
-```
+
+```r
 range(d$crime)
 # 221.718  328.100
 
@@ -67,8 +83,10 @@ mean(d$crime)+1.96*sd(d$crime)/sqrt(200)
 mean(d$crime)-1.96*sd(d$crime)/sqrt(200)
 # 295.1182
 ```
+
 #### Table () function
-```
+
+```r
 table(d$evi)
 table(d$evi>0.3)
 #FALSE  TRUE 
@@ -79,8 +97,10 @@ addmargins(tb1)
 prop.table(tb1)
 table(d$crime>290, d$open>1.5)
 ```
+
 #### The Chi-Square test
-```
+
+```r
 chisq.test(dt) # chisq.test performs chi-squared contingency table tests and goodness-of-fit tests.
 #Pearson's Chi-squared test
 
@@ -96,7 +116,8 @@ chisq.test(dt) # chisq.test performs chi-squared contingency table tests and goo
 ```
 
 #### Describe
-```
+
+```r
 psych::describe(dt) #using describe from psych package
 #vars n mean sd median trimmed  mad min max range skew
 #x    1 3    3  2      3       3 2.97   1   5     4    0
@@ -128,11 +149,12 @@ Hmisc::describe(dt) # using describe from Hmisc package
 ```
 
 #### Using tapply () function for calculating descriptive statistics
-```
+
+```r
 tapply(d$crime, d$open, mean)
 tapply( d$crime, list( d$open, d$evi < 0.3), mean, na.rm=T )
 ```
-<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
 
-To get full video tutorial and certificate, please, enroll in the course through this link:
-https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A
+If you enjoy the content, please consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
+
+To access video tutorials and receive a certificate, enroll in my [Udemy course](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A).

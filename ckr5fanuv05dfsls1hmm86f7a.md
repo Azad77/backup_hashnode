@@ -1,23 +1,36 @@
-# 1- Data types in R
+---
+title: "1- Data types in R"
+datePublished: Thu Jul 15 2021 21:27:07 GMT+0000 (Coordinated Universal Time)
+cuid: ckr5fanuv05dfsls1hmm86f7a
+slug: 1-data-types-in-r
+tags: tutorial, programming-blogs, r, research, learn-coding
 
-%%[adsense]
-We recommend to you install and use the latest version of [R](https://cran.r-project.org/bin/windows/base/) and   [RStudio IDE](https://www.rstudio.com/products/rstudio/download/). 
+---
+
+%%\[adsense\] We recommend installing and using the latest versions of [R](https://cran.r-project.org/bin/windows/base/) and [RStudio IDE](https://www.rstudio.com/products/rstudio/download/).
 
 The common R data types for research are numeric, factor, and character.
 
 #### Numeric
-```
-a <- c(-1, -3, 0, 5, 7, 8, 4, 6.3, 10) 
+
+```python
+a <- c(-1, -3, 0, 5, 7, 8, 4, 6.3, 10)
 ```
 
-- "<-" is assignment operator
-- "c()" function combines values into a vector or list.
-- We can get help about functions by using question mark and the name of the function, for example:
-```
+* "&lt;-" is the assignment operator.
+    
+* "c()" function combines values into a vector or list.
+    
+* We can get help about functions by using the question mark followed by the name of the function, for example:
+    
+
+```python
 ?c()
 ```
+
 #### Factor
-```
+
+```python
 drink_vector <- (c('milk', 'water', 'juice'))
 drink_vector
 # [1] "milk"  "water" "juice"
@@ -26,49 +39,62 @@ drink_factor
 # [1] milk  water juice
 # Levels: juice milk water
 ```
+
 #### Character
-```
+
+```python
 d<-c('Hellow world', 'R is fun!')
 d
-# [1] "Hellow world" "R is fun!" 
+# [1] "Hellow world" "R is fun!"
 ```
-#### Create dataframe:
-```
+
+#### Create a dataframe:
+
+```python
 a <- c(1, 3, 5, 7)
 b <- c(2, 4, 6, 8)
 df<-data.frame(a, b)
 df
 ```
-Add a column with $ operator
-```
+
+Add a column with the $ operator:
+
+```python
 df$new_column <- c(1, 2, 3, 4)
 df
 ```
-Add a column with cbind function
-```
+
+Add a column with the cbind function:
+
+```python
 df <- cbind(df, new_new_column = c('a', 'b', 'c', 'd'))
 df
 ```
-View df as table in RStudio
-```
+
+View the dataframe as a table in RStudio:
+
+```python
 view(df)
 ```
-Get names of dataframe
-```
+
+Get the names of the dataframe:
+
+```python
 names(df)
 ```
-Display the Structure of the dataframe
-```
+
+Display the structure of the dataframe:
+
+```python
 str(df)
 ```
+
 Summary
-```
+
+```python
 summary(df)
 ```
-<blockquote>
-<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
-</blockquote>
-To get full video tutorial and certificate, please, enroll in the course through this link:
-https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A
 
-
+> If you find this content helpful, please consider subscribing to my [channel](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
+> 
+> To get full video tutorial and certificate, please, enroll in the course through this link: [**udemy.com/course/r-for-research/?referralCo**](http://udemy.com/course/r-for-research/?referralCo)[**..**](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A)

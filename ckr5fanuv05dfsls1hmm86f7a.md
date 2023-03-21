@@ -7,7 +7,7 @@ tags: tutorial, programming-blogs, r, research, learn-coding
 
 ---
 
-%%\[adsense\] We recommend installing and using the latest versions of [R](https://cran.r-project.org/bin/windows/base/) and [RStudio IDE](https://www.rstudio.com/products/rstudio/download/).
+We recommend installing and using the latest versions of [R](https://cran.r-project.org/bin/windows/base/) and [RStudio IDE](https://www.rstudio.com/products/rstudio/download/).
 
 The common R data types for research are numeric, factor, and character.
 

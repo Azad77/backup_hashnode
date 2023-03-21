@@ -13,7 +13,7 @@ The common R data types for research are numeric, factor, and character.
 
 #### Numeric
 
-```python
+```r
 a <- c(-1, -3, 0, 5, 7, 8, 4, 6.3, 10)
 ```
 
@@ -24,13 +24,13 @@ a <- c(-1, -3, 0, 5, 7, 8, 4, 6.3, 10)
 * We can get help about functions by using the question mark followed by the name of the function, for example:
     
 
-```python
+```r
 ?c()
 ```
 
 #### Factor
 
-```python
+```r
 drink_vector <- (c('milk', 'water', 'juice'))
 drink_vector
 # [1] "milk"  "water" "juice"
@@ -42,7 +42,7 @@ drink_factor
 
 #### Character
 
-```python
+```r
 d<-c('Hellow world', 'R is fun!')
 d
 # [1] "Hellow world" "R is fun!"
@@ -50,7 +50,7 @@ d
 
 #### Create a dataframe:
 
-```python
+```r
 a <- c(1, 3, 5, 7)
 b <- c(2, 4, 6, 8)
 df<-data.frame(a, b)
@@ -59,39 +59,39 @@ df
 
 Add a column with the $ operator:
 
-```python
+```r
 df$new_column <- c(1, 2, 3, 4)
 df
 ```
 
 Add a column with the cbind function:
 
-```python
+```r
 df <- cbind(df, new_new_column = c('a', 'b', 'c', 'd'))
 df
 ```
 
 View the dataframe as a table in RStudio:
 
-```python
+```r
 view(df)
 ```
 
 Get the names of the dataframe:
 
-```python
+```r
 names(df)
 ```
 
 Display the structure of the dataframe:
 
-```python
+```r
 str(df)
 ```
 
 Summary
 
-```python
+```r
 summary(df)
 ```
 

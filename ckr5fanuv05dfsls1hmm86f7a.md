@@ -95,6 +95,6 @@ Summary
 summary(df)
 ```
 
-> If you find this content helpful, please consider subscribing to my [channel](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
+> If you enjoy the content, please consider subscribing to my [**YouTube channel**](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
 > 
-> To get full video tutorial and certificate, please, enroll in the course through this link: [**udemy.com/course/r-for-research/?referralCo**](http://udemy.com/course/r-for-research/?referralCo)[**..**](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A)
+> To access video tutorials and receive a certificate, enroll in my [**Udemy course**](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A).

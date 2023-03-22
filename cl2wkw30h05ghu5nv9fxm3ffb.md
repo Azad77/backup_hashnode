@@ -1,11 +1,13 @@
 ---
-title: "6- Creating models"
+title: "6- Creating Models for a Poll App with Django."
 datePublished: Sun May 08 2022 00:50:17 GMT+0000 (Coordinated Universal Time)
 cuid: cl2wkw30h05ghu5nv9fxm3ffb
-slug: 6-creating-models
+slug: 6-creating-models-for-a-poll-app-with-django
 tags: django
 
 ---
+
+Learn how to create models for a poll app with Django by following the step-by-step guide provided in this article. You'll create two models, Question and Choice, and edit the polls/models.py file to add the necessary code. Then, you'll edit the PollProject/settings.py file to add the dotted path to the INSTALLED\_APPS setting. Finally, you'll run a few commands to create the model tables in your database. By the end of this tutorial, you'll have a fully functional poll app that you can use for your own projects.
 
 In our poll app, we will create two models: Question and Choice. Please edit the polls/models.py file so that it looks like the following:
 
@@ -38,7 +40,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-### Let's run another command:
+Let's run another command:
 
 ```python
 python manage.py makemigrations polls
@@ -89,7 +91,7 @@ Operations to perform: Apply all migrations: admin, auth, contenttypes, polls, s
 class Choice(models.Model): # ... def str(self): return self.choice_text Under class Question(models.Model) add: def was_published_recently(self): now = timezone.now() return now - datetime.timedelta(days=1) <= self.pub_date <= now was_published_recently.admin_order_field = 'pub_date' was_published_recently.boolean = True was_published_recently.short_description = 'Published recently?'
 ```
 
-**Now, polls/models.py should look like this:**
+Now, polls/models.py should look like this:
 
 ```python
 import datetime
@@ -121,5 +123,7 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 ```
+
+In conclusion, this article provides a step-by-step guide on how to create models for a poll app with Django. By following the instructions provided, readers can create two models, Question and Choice, and add the necessary code to the polls/models.py file. They can also edit the PollProject/settings.py file to add the dotted path to the INSTALLED\_APPS setting and run a few commands to create the model tables in their database. By the end of the tutorial, readers will have a fully functional poll app that they can use for their own projects.
 
 If you find this content helpful, please consider [subscribing](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future updates.

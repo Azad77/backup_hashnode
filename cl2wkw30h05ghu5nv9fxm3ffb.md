@@ -1,6 +1,13 @@
-# 6- Creating models
+---
+title: "6- Creating models"
+datePublished: Sun May 08 2022 00:50:17 GMT+0000 (Coordinated Universal Time)
+cuid: cl2wkw30h05ghu5nv9fxm3ffb
+slug: 6-creating-models
+tags: django
 
-In our poll app, we’ll create two models: Question and Choice. Edit the polls/models.py file so it looks like this:
+---
+
+In our poll app, we will create two models: Question and Choice. Please edit the polls/models.py file so that it looks like the following:
 
 ```python
 from django.db import models
@@ -17,7 +24,7 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-Edit the PollProject/settings.py file and add that dotted path to the INSTALLED\_APPS setting. It’ll look like this:
+Next, edit the PollProject/settings.py file and add the dotted path to the INSTALLED\_APPS setting. It should look like this:
 
 ```python
 INSTALLED_APPS = [
@@ -31,11 +38,13 @@ INSTALLED_APPS = [
 ]
 ```
 
-### Let’s run another command:
+### Let's run another command:
 
-py manage.py makemigrations polls
+```python
+python manage.py makemigrations polls
+```
 
-You should see something like this:
+You should see output like this:
 
 ```python
 BEGIN;
@@ -66,19 +75,21 @@ CREATE INDEX "polls_choice_question_id_c5b4b260" ON "polls_choice" ("question_id
 COMMIT;
 ```
 
-To create those model tables in your database, run migrate command:
+To create those model tables in your database, run the following migrate command:
 
-py manage.py migrate
+```python
+python manage.py migrate
+```
 
-You should see something like:
+You should see output like this:
 
 ```python
 Operations to perform: Apply all migrations: admin, auth, contenttypes, polls, sessions Running migrations: Applying polls.0001_initial... OK Inside polls/models.py add a __str__() method to both Question and Choice: class Question(models.Model): # ... def str(self): return self.question_text
 
-class Choice(models.Model): # ... def str(self): return self.choice_text Under class Question(models.Model) add: def was_published_recently(self): now = timezone.now() return now - datetime.timedelta(days=1) <= self.pub_date <= now was_published_recently.admin_order_field = 'pub_date' was_published_recently.boolean = True was_published_recently.short_description = 'Published recently?' 
+class Choice(models.Model): # ... def str(self): return self.choice_text Under class Question(models.Model) add: def was_published_recently(self): now = timezone.now() return now - datetime.timedelta(days=1) <= self.pub_date <= now was_published_recently.admin_order_field = 'pub_date' was_published_recently.boolean = True was_published_recently.short_description = 'Published recently?'
 ```
 
-**Now, polls/models.py should be like that:**
+**Now, polls/models.py should look like this:**
 
 ```python
 import datetime
@@ -111,4 +122,4 @@ class Choice(models.Model):
         return self.choice_text
 ```
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content
+If you find this content helpful, please consider [subscribing](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future updates.

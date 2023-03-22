@@ -1,4 +1,13 @@
-# 11- Create form
+---
+title: "11- Step-by-Step Guide: Creating Custom Forms with Django"
+datePublished: Sun May 08 2022 19:22:35 GMT+0000 (Coordinated Universal Time)
+cuid: cl2xomi5z08gou5nv2izm3qkf
+slug: 11-step-by-step-guide-creating-custom-forms-with-django
+tags: django, web-development
+
+---
+
+Are you looking to create a custom form for your website or application? Look no further than this step-by-step guide on how to create a form using Django. With clear instructions and code examples, you'll be able to create a form and display the results in no time.
 
 Edit our poll detail template (“polls/detail.html”), to be:
 
@@ -96,4 +105,6 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 ```
 
-<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
+In conclusion, this article provides a step-by-step guide on how to create a custom form using Django for a website or application. It includes clear instructions and code examples, making it easy for readers to follow along and create their own form. Additionally, it suggests using Django's generic views for a more efficient process. Overall, this article is a helpful resource for those looking to create a custom form for their project.
+
+If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

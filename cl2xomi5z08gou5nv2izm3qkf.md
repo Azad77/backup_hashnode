@@ -9,7 +9,7 @@ tags: django, web-development
 
 Are you looking to create a custom form for your website or application? Look no further than this step-by-step guide on how to create a form using Django. With clear instructions and code examples, you'll be able to create a form and display the results in no time.
 
-Edit our poll detail template (“polls/detail.html”), to be:
+Edit our poll detail template ("polls/detail.html") to be:
 
 ```css
 <form action="{% url 'polls:vote' question.id %}" method="post">
@@ -26,7 +26,7 @@ Edit our poll detail template (“polls/detail.html”), to be:
 </form>
 ```
 
-Now, create a polls/templates/polls/results.html template and add the following code to it:
+Now, create a "polls/templates/polls/results.html" template and add the following code to it:
 
 ```css
 <h1>{{ question.question_text }}</h1>
@@ -40,9 +40,9 @@ Now, create a polls/templates/polls/results.html template and add the following 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
 ```
 
-Now, go to /polls/1/ in your browser and vote in the question. You should see a results page that gets updated each time you vote.
+Next, go to "/polls/1/" in your browser and vote in the question. You should see a results page that gets updated each time you vote.
 
-Open the polls/urls.py URLconf and change it like so:
+Open the "polls/urls.py" URLconf and change it like so:
 
 ```css
 from django.urls import path
@@ -58,7 +58,7 @@ urlpatterns = [
 ]
 ```
 
-To use Django’s generic views, open the polls/views.py file and change it like so:
+To use Django's generic views, open the "polls/views.py" file and change it like so:
 
 ```plaintext
 from django.http import HttpResponseRedirect
@@ -107,4 +107,4 @@ def vote(request, question_id):
 
 In conclusion, this article provides a step-by-step guide on how to create a custom form using Django for a website or application. It includes clear instructions and code examples, making it easy for readers to follow along and create their own form. Additionally, it suggests using Django's generic views for a more efficient process. Overall, this article is a helpful resource for those looking to create a custom form for their project.
 
-If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content
+If you find this content helpful, please consider [subscribing](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future updates.

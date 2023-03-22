@@ -7,7 +7,7 @@ tags: django, web-development, poll
 
 ---
 
-In this article, we'll show you how to create a Django model with questions and choices. You'll learn how to use the Python shell to create and save a new question object in the database, access model field values using Python attributes, and create multiple choices for your question. Follow along with our step-by-step guide to get started with Django models and build your own interactive web applications.
+In this article, we will show you how to create a Django model with questions and choices. You will learn how to use the Python shell to create and save a new question object in the database, access model field values using Python attributes, and create multiple choices for your question. Follow along with our step-by-step guide to get started with Django models and build your interactive web applications.
 
 To invoke the Python shell, use this command:
 
@@ -28,7 +28,7 @@ from django.utils import timezone
 q = Question(question_text="Rate this tutorial:", pub_date=timezone.now())
 ```
 
-Save the object into the database. You have to call save() explicitly.
+Save the object into the database. You have to call `save()` explicitly.
 
 ```python
 q.save()
@@ -67,6 +67,6 @@ q.choice_set.create(choice_text='*****', votes=0)
 q.choice_set.all()
 ```
 
-In conclusion, this article provides a step-by-step guide on how to create a Django model with questions and choices. It demonstrates how to use the Python shell to create and save a new question object in the database, access model field values using Python attributes, and create multiple choices for the question. By following this guide, readers can get started with Django models and build their own interactive web applications.
+In conclusion, this article provides a step-by-step guide to creating a Django model with questions and choices. It demonstrates how to use the Python shell to create and save a new question object in the database, access model field values using Python attributes, and create multiple choices for the question. By following this guide, readers can get started with Django models and build their interactive web applications.
 
 If you find this content helpful, please consider [subscribing](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future updates.

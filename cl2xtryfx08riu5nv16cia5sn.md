@@ -1,8 +1,18 @@
-# 12- Create automated tests
+---
+title: "12- Create automated tests"
+datePublished: Sun May 08 2022 21:46:47 GMT+0000 (Coordinated Universal Time)
+cuid: cl2xtryfx08riu5nv16cia5sn
+slug: 12-create-automated-tests
+tags: django, web-development
 
-To create a test put the following in the polls/tests.py file:
-```
-import datetime
+---
+
+Are you a beginner in the world of automated testing and looking to boost your testing efficiency? Automated tests can save time and effort while ensuring the quality of your code. In this beginner's tutorial, we'll guide you through the process of creating and running automated tests for your Python application. Learn how to add test methods, import modules, and create shortcut functions to streamline your testing process. Follow these steps to improve your testing efficiency and ensure the reliability of your code.
+
+To create a test, put the following in the polls/tests.py file:
+
+```python
+pythonCopy codeimport datetime
 
 from django.test import TestCase
 from django.utils import timezone
@@ -21,12 +31,16 @@ class QuestionModelTests(TestCase):
         future_question = Question(pub_date=time)
         self.assertIs(future_question.was_published_recently(), False)
 ```
-To run the test use the following comand in cmd: 
-```
+
+To run the test, use the following command in the cmd:
+
+```python
 py manage.py test polls
 ```
-You see thomething like that:
-```
+
+You should see something like this:
+
+```python
 Found 1 test(s).
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
@@ -39,7 +53,8 @@ Destroying test database for alias 'default'...
 ```
 
 To test the behavior of the method more comprehensively, add two more test methods to the same class:
-```
+
+```python
 def test_was_published_recently_with_old_question(self):
     """
     was_published_recently() returns False for questions whose pub_date
@@ -58,12 +73,16 @@ def test_was_published_recently_with_recent_question(self):
     recent_question = Question(pub_date=time)
     self.assertIs(recent_question.was_published_recently(), True)
 ```
+
 Add an import to polls/views.py:
-```
+
+```python
 from django.utils import timezone
 ```
-Then, edit the get_queryset method like so:
-```
+
+Then, edit the `get_queryset()` method like so:
+
+```python
 def get_queryset(self):
     """
     Return the last five published questions (not including those set to be
@@ -75,11 +94,14 @@ def get_queryset(self):
 ```
 
 Then, add the following to polls/tests.py:
-```
+
+```python
 from django.urls import reverse
 ```
-Now, create a shortcut function to create questions as well as a new test class by add the following code to polls/tests.py:
-```
+
+Now, create a shortcut function to create questions as well as a new test class by adding the following code to polls/tests.py:
+
+```python
 def create_question(question_text, days):
     """
     Create a question with the given `question_text` and published the
@@ -148,3 +170,6 @@ class QuestionIndexViewTests(TestCase):
         )
 ```
 
+Automated testing can be a valuable tool for beginners to improve their testing efficiency and ensure the reliability of their code. By following the steps outlined in this beginner's tutorial, developers can learn how to create and run automated tests for their Python applications. The tutorial covers topics such as adding test methods, importing modules, and creating shortcut functions to streamline the testing process. By using automated tests, developers can save time and effort while ensuring the quality of their code.
+
+If you find this content helpful, please consider [subscribing](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for future updates.

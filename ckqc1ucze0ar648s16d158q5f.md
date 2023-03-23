@@ -31,4 +31,6 @@ Now, let's load the raster file into QGIS using PyQGIS. In the Python console, u
 rlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
 ```
 
+In conclusion, the GDAL library is used in QGIS for loading raster files. The article provides steps on how to load a raster file using PyQGIS and the format of the code needed to add the layer. The article also provides a link to download the data used in the example code.
+
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

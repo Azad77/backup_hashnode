@@ -1,13 +1,15 @@
 ---
-title: "15- Animated graphs in R programming"
+title: "15- Master the Art of Data Visualization with Animated Graphs in R Programming"
 datePublished: Sat Jul 24 2021 08:08:06 GMT+0000 (Coordinated Universal Time)
 cuid: ckrhhps7q0db0nts127pghyyv
-slug: 15-animated-graphs-in-r-programming
+slug: 15-master-the-art-of-data-visualization-with-animated-graphs-in-r-programming
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1627118233398/ZjWwTDiJi.gif
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1627114026910/mgYlFsGF9.gif
 tags: tutorial, r, research, graphics, programming-languages
 
 ---
+
+Looking for ways to create animated graphs in R programming? Check out this tutorial that provides step-by-step instructions on how to use various R libraries to create animated timelines, scatterplots, boxplots, violin plots, and more. You'll also find downloadable datasets and GIFs showcasing the final products. Whether you're a data scientist, researcher, or student, this guide can help you enhance your data visualization skills and impress your audience.
 
 Download the used datasets in the tutorial:
 
@@ -469,6 +471,8 @@ anim_save("animate_pie_chart_LULC_Chane.gif")
 ```
 
 ![animate_pie_chart_LULC_Chane_500_500.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1627158829784/oGjtcJaCG.gif align="left")
+
+In conclusion, this tutorial provides step-by-step instructions on how to use various R libraries to create animated graphs such as timelines, scatterplots, boxplots, violin plots, and more. It also includes downloadable datasets and GIFs showcasing the final products. Whether you're a data scientist, researcher, or student, this guide can help you enhance your data visualization skills and impress your audience.
 
 If you enjoy the content, please consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
 

@@ -1,4 +1,13 @@
-# 8- Forms in Flask
+---
+title: "8- Create Custom Forms with Flask: A Step-by-Step Guide"
+datePublished: Thu Jan 05 2023 21:43:10 GMT+0000 (Coordinated Universal Time)
+cuid: clcjm7g1s000008li1qqjcdn3
+slug: 8-create-custom-forms-with-flask-a-step-by-step-guide
+tags: python, web-development, flask, programming-languages
+
+---
+
+This article provides a step-by-step guide on how to create a form using Flask, a Python web framework. You will learn how to create a form that prompts the user to answer the question "What is the most popular programming language?" with three answer fields. Additionally, you will be guided on how to create a results page and a Python script to run the form. By following the instructions provided in this article, you can easily create your own forms using Flask and obtain results based on the user's input.
 
 Create “form.html” file that contains a form to answer a question: “What is the most popular programming language?” and three fields for answers:
 
@@ -57,4 +66,6 @@ Fill out the form and submit it to get the results page like this:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672955501857/60cc94d7-6810-4d1e-a7e2-008c755df245.png align="center")
 
-<p>* If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
+This article provides instructions on how to create a form using Flask, a Python web framework. Specifically, it shows how to create a form that asks the user to answer the question "What is the most popular programming language?" and provides three fields for the answers. The article also includes instructions on how to create a results page and a Python script to run the form. By following the instructions provided in this article, users can create their own forms using Flask and obtain results based on the user's input.
+
+\* If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

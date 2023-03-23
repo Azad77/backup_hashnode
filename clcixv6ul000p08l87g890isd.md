@@ -11,13 +11,13 @@ As a developer, you always strive to optimize your Flask application's performan
 
 ### **Create new folders:**
 
-First, create a directory called static in your project directory using cmd:
+First, create a directory called "static" in your project directory using the command prompt:
 
 ```python
 mkdir C:\Users\gardi\flask-tutorial\static
 ```
 
-Inside static folder create a "style" folder for styling the page and "img" folder for images using cmd:
+Inside the "static" folder, create a "style" folder for styling the page and an "img" folder for images using the command prompt:
 
 ```python
 mkdir C:\Users\gardi\flask-tutorial\static\style
@@ -27,9 +27,9 @@ mkdir C:\Users\gardi\flask-tutorial\static\style
 mkdir C:\Users\gardi\flask-tutorial\static\img
 ```
 
-### Create Python, HTML, and CSS files
+### **Create Python, HTML, and CSS files**
 
-Create a Python file to render index template and save it as "static.py":
+Create a Python file to render the index template and save it as "static.py":
 
 ```python
 from flask import Flask, render_template
@@ -71,7 +71,7 @@ This sentence code defines the link of the style file:
 
 ### **Create css style file:**
 
-Create a css file inside "static\\style" folder for styling your pages and save it as "style.css":
+Create a CSS file inside the "static/style" folder for styling your pages and save it as "style.css":
 
 ```css
 html { font-family: sans-serif; background: #eee; padding: 1rem; }
@@ -102,31 +102,29 @@ input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; }
 ```
 
-Run the "static.py" script inside cmd:
+Run the "static.py" script in the command prompt:
 
 ```css
 python static.py
 ```
 
-Now open your internet browser and write:
+Next, open your internet browser and navigate to:
 
 [**localhost:5000**](http://localhost:5000)
 
-Your styled web page should be opened like this:
+Your styled web page should now be displayed as follows:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672913501318/a0212502-ca25-4ee0-9ee5-2c0c52f90065.png align="center")
 
-### Load background image
+### **Adding a background image**
 
-Inside img directory, put an image and name it "background.jpg".
-
-To insert the background image add the following code to the index template:
+To add a background image, place an image in the "img" directory and name it "background.jpg". Then, insert the following code in the index template:
 
 ```css
 <img src= "{{ url_for("static", filename= "img/background.jpg") }}">
 ```
 
-The index file is now should be looks like this:
+The updated index file should look like this:
 
 ```css
 <html lang="en">
@@ -152,10 +150,10 @@ The index file is now should be looks like this:
 </html>
 ```
 
-Now reload opened web page to inset the background image looks like that:
+Finally, reload the web page to view the background image:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672912977561/423df376-ee8b-4e22-924a-a63526607496.png align="center")
 
-In conclusion, leveraging static files such as images, JavaScript, and CSS is an effective way to optimize the performance of Flask applications. By following the steps outlined in this article, developers can create and utilize static files to enhance their Flask app's performance and create stunning web pages that load quickly. Creating new folders, Python, HTML, and CSS files, and loading background images are all ways to improve the performance of Flask applications.
+In conclusion, utilizing static files such as images, JavaScript, and CSS is an effective way to optimize the performance of Flask applications. By following the steps outlined in this article, developers can create and utilize static files to enhance their Flask app's performance and create stunning web pages that load quickly. Creating new folders, Python, HTML, and CSS files, and loading background images are all ways to improve the performance of Flask applications.
 
 \* If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

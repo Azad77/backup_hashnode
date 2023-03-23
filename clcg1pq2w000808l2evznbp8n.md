@@ -7,6 +7,8 @@ tags: programming-blogs, python, flask, hello-world
 
 ---
 
+Are you interested in learning how to create a simple web application using Flask? Look no further! In this step-by-step guide, we'll show you how to create a "Hello, World!" app in Flask. You'll learn how to set up your development environment, write a Python script to define your app, and run your app locally. With Flask's powerful features, you'll be well on your way to building more complex web applications in no time. So, let's get started!
+
 1- Install Python and Flask on your computer. If you don't have them already, you can download Python from the official website and install Flask using pip.
 
 2- Open a new Python script and import the Flask class from the flask package using the following line of code:
@@ -60,5 +62,7 @@ def hello():
 if __name__ == "__main__":
         app.run(debug=True)
 ```
+
+In conclusion, this step-by-step guide provides a simple and easy-to-follow process for creating a "Hello, World!" app in Flask. By following the instructions, users can quickly set up their development environment, write a Python script to define their app, and run their app locally. Flask's powerful features make it an excellent framework for building more complex web applications in the future.
 
 \* If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

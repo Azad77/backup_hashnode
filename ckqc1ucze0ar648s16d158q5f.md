@@ -7,30 +7,26 @@ tags: programming-blogs, python, learning, gis
 
 ---
 
-For loading raster files, GDAL library is used in QGIS.
+To load raster files in QGIS, the GDAL library is commonly used. In order to follow along with the examples in this tutorial, you will need to first download the data we will be working with from the following link: [**data**](https://github.com/Azad77/Python_qgis/blob/main/Data/dem_subset.tif).
 
-Firstly, download the [data](https://github.com/Azad77/Python_qgis/blob/main/Data/dem_subset.tif) we are using.
-
-Then, get the path of the raster file:
+Next, you will need to get the path of the downloaded raster file. For example:
 
 ```plaintext
-uri = "D:/Python_QGIS/data/dem_subset.tif"
+plaintextCopy codeuri = "D:/Python_QGIS/data/dem_subset.tif"
 ```
 
-Now add the layer
+With the path to the raster file, you can now add the layer to QGIS using the following format:
 
-The format of the code is:
+```
+plaintextCopy coderlayer = iface.addRasterLayer(data_source, layer_name, provider_name)
+```
+
+To load the raster file into QGIS using PyQGIS, use the following code in the Python console:
 
 ```plaintext
-rlayer = iface.addRasterLayer(data_source, layer_name, provider_name)
+plaintextCopy coderlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
 ```
 
-Now, let's load the raster file into QGIS using PyQGIS. In the Python console, use the following code:
-
-```plaintext
-rlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
-```
-
-In conclusion, the GDAL library is used in QGIS for loading raster files. The article provides steps on how to load a raster file using PyQGIS and the format of the code needed to add the layer. The article also provides a link to download the data used in the example code.
+In summary, this article explains how to use PyQGIS to load raster files into QGIS using the GDAL library. It provides step-by-step instructions on how to add a layer to QGIS, and includes a link to download the data used in the example code.
 
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

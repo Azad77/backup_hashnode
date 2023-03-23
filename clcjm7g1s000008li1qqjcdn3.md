@@ -9,7 +9,7 @@ tags: python, web-development, flask, programming-languages
 
 This article provides a step-by-step guide on how to create a form using Flask, a Python web framework. You will learn how to create a form that prompts the user to answer the question "What is the most popular programming language?" with three answer fields. Additionally, you will be guided on how to create a results page and a Python script to run the form. By following the instructions provided in this article, you can easily create your own forms using Flask and obtain results based on the user's input.
 
-Create “form.html” file that contains a form to answer a question: “What is the most popular programming language?” and three fields for answers:
+Create a "form.html" file that contains a form to answer the question "What is the most popular programming language?" with three fields for answers:
 
 ```css
 <form action = "http://localhost:5000/result" method = "POST">
@@ -21,7 +21,7 @@ Create “form.html” file that contains a form to answer a question: “What i
 </form>
 ```
 
-And create a “results.html” file to return results:
+Create a "results.html" file to display the results:
 
 ```css
 <html>
@@ -38,7 +38,7 @@ And create a “results.html” file to return results:
 </html>
 ```
 
-And now prepare a “[form.py](http://form.py)” script:
+Prepare a "[form.py](http://form.py)" script:
 
 ```python
 from flask import Flask, render_template, request

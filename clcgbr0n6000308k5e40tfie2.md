@@ -17,7 +17,7 @@ Now, let's get started. Firstly, create a directory for your project templates u
 
 This command will create a new directory called "templates" in your project folder. All of your HTML templates will be stored in this directory.
 
-For example, let's create an HTML file and write Hello World of Programming! inside it in blue color:
+For example, let's create an HTML file and write "Hello World of Programming!" inside it in blue color:
 
 ```python
 <html>
@@ -27,21 +27,21 @@ For example, let's create an HTML file and write Hello World of Programming! ins
 </html>
 ```
 
-Now let's create a python script and save it as hello1.py.
+Now let's create a Python script and save it as "[hello1.py](http://hello1.py)".
 
-At the beginning of the script we have to import Flask and render\_template:
+At the beginning of the script, we have to import Flask and render\_template:
 
 ```python
 from flask import Flask, render_template
 ```
 
-Then create app:
+Then create the app:
 
 ```python
 app = Flask(__name__)
 ```
 
-We define route **hello** to return **hello.html** template using render\_template:
+We define a route "hello" to return the "hello.html" template using render\_template:
 
 ```python
 @app.route("/")
@@ -64,7 +64,7 @@ python hello1.py
 
 Open your localhost:
 
-[http://localhost:5000/](http://localhost:5000/)
+[**http://localhost:5000/**](http://localhost:5000/)
 
 A web page like the following should be opened:
 

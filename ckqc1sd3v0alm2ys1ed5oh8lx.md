@@ -11,7 +11,7 @@ Are you searching for a step-by-step guide on how to load vector layers using QG
 
 You can download the data we are using from this [**link**](https://github.com/Azad77/Python_qgis/blob/main/Data/Countries.zip).
 
-Then, retrieve the path of the shapefile using the following code:
+Next, open a Python console within QGIS by going to Plugins &gt; Python Console. In the console, use the following code to retrieve the path of the shapefile:
 
 ```plaintext
 uri = "D:/Python_QGIS/data/Countries.shp"
@@ -23,10 +23,12 @@ The format of the code is:
 vlayer = iface.addVectorLayer(data_source, layer_name, provider_name)
 ```
 
-To load our shapefile, use the following code:
+Now, let's load the shapefile into QGIS using PyQGIS. In the Python console, use the following code:
 
 ```plaintext
 iface.addVectorLayer(uri, "countries", "ogr")
 ```
+
+In conclusion, this article provides a step-by-step guide on how to load vector layers using PyQGIS. It includes instructions on how to download the required data and retrieve the shapefile path, as well as the code needed to load the shapefile. By following these instructions, users can easily add vector layers to their QGIS project.
 
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

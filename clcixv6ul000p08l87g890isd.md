@@ -1,6 +1,13 @@
-# 6- Static files in Flask
+---
+title: "6- Boost Your Flask App's Performance with Static Files"
+datePublished: Thu Jan 05 2023 10:21:47 GMT+0000 (Coordinated Universal Time)
+cuid: clcixv6ul000p08l87g890isd
+slug: 6-boost-your-flask-apps-performance-with-static-files
+tags: python, web-development, flask
 
-Static files are necessary files to render the complete web page such as images, JavaScript, or CSS.
+---
+
+As a developer, you always strive to optimize your Flask application's performance. One effective way to achieve this is by leveraging static files such as images, JavaScript, and CSS. In this article, we'll take a detailed look at how to create and utilize static files to enhance your Flask app's performance. By the end of this article, you'll have a better understanding of how to create new folders, Python, HTML, and CSS files, and load background images to create stunning web pages that load quickly.
 
 ### **Create new folders:**
 
@@ -53,14 +60,13 @@ if name == '__main__':
 
     </body>
 </html>
- 
 ```
 
 This sentence code defines the link of the style file:
 
 ```python
     <link rel="stylesheet" type="text/css" 
-          href="{{ url_for('static', filename='style.css') }}"> 
+          href="{{ url_for('static', filename='style.css') }}">
 ```
 
 ### **Create css style file:**
@@ -150,4 +156,6 @@ Now reload opened web page to inset the background image looks like that:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1672912977561/423df376-ee8b-4e22-924a-a63526607496.png align="center")
 
-<p>* If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
+In conclusion, leveraging static files such as images, JavaScript, and CSS is an effective way to optimize the performance of Flask applications. By following the steps outlined in this article, developers can create and utilize static files to enhance their Flask app's performance and create stunning web pages that load quickly. Creating new folders, Python, HTML, and CSS files, and loading background images are all ways to improve the performance of Flask applications.
+
+\* If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

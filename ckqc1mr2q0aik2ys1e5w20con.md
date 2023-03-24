@@ -1,5 +1,5 @@
 ---
-title: "2- Mastering Python Console: A Guide to Using the Print() Function"
+title: "2- Mastering Python Console: A Guide to Using the print() Function"
 datePublished: Fri Jun 25 2021 07:59:17 GMT+0000 (Coordinated Universal Time)
 cuid: ckqc1mr2q0aik2ys1e5w20con
 slug: 2-mastering-python-console-a-guide-to-using-the-print-function
@@ -12,7 +12,7 @@ Are you ready to take your Python skills to the next level? Look no further than
 In the Python console use *print()* function to write.
 
 ```plaintext
-Print("Hello My Dear Learner!")
+print("Hello My Dear Learner!")
 ```
 
 Then click "Enter"

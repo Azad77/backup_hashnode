@@ -15,11 +15,11 @@ In the Python console use *print()* function to write.
 print("Hello My Dear Learner!")
 ```
 
-Then click "Enter"  
+Then click "Enter"
 
 ![Hello My Dear Learner.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1623343634800/Wn_dBLqXm.png align="left")
 
-print("My name is Azad")
+print("My name is 'Your Name'. ")
 
 > The article aims to help readers take their Python skills to the next level by mastering the Python console and print() function.
 > 

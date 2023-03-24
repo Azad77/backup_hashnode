@@ -35,6 +35,20 @@ print ("20 * 6 = ", 20*6)
 # 20 * 6 =  120
 ```
 
-> The article aims to help readers take their Python skills to the next level by mastering the Python console and print() function.
-> 
+```plaintext
+x = 10
+print(x)
+# 10
+```
+
+```plaintext
+x = 10
+y = 20
+z = x + y
+print ("x + y = ", z)
+# x + y = 30
+```
+
+In conclusion, the article provides a comprehensive guide on how to use the print() function in the Python console to write and display text, variables, and even complex data structures. By mastering the print() function, readers can improve their Python skills and have a better understanding of what their code is doing.
+
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

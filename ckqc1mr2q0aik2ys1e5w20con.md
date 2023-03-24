@@ -19,7 +19,21 @@ Then click "Enter"
 
 ![Hello My Dear Learner.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1623343634800/Wn_dBLqXm.png align="left")
 
+```plaintext
 print("My name is 'Your Name'. ")
+```
+
+You can print the output of mathematical operations, for example:
+
+```plaintext
+print (120/6)
+# 20.0
+```
+
+```plaintext
+print ("20 * 6 = ", 20*6)
+# 20 * 6 =  120
+```
 
 > The article aims to help readers take their Python skills to the next level by mastering the Python console and print() function.
 > 

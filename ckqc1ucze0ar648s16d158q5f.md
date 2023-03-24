@@ -12,19 +12,19 @@ To load raster files in QGIS, the GDAL library is commonly used. In order to fol
 Next, you will need to get the path of the downloaded raster file. For example:
 
 ```plaintext
-plaintextCopy codeuri = "D:/Python_QGIS/data/dem_subset.tif"
+codeuri = "D:/Python_QGIS/data/dem_subset.tif"
 ```
 
 With the path to the raster file, you can now add the layer to QGIS using the following format:
 
-```
-plaintextCopy coderlayer = iface.addRasterLayer(data_source, layer_name, provider_name)
+```plaintext
+coderlayer = iface.addRasterLayer(data_source, layer_name, provider_name)
 ```
 
 To load the raster file into QGIS using PyQGIS, use the following code in the Python console:
 
 ```plaintext
-plaintextCopy coderlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
+coderlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
 ```
 
 In summary, this article explains how to use PyQGIS to load raster files into QGIS using the GDAL library. It provides step-by-step instructions on how to add a layer to QGIS, and includes a link to download the data used in the example code.

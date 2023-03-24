@@ -1,13 +1,23 @@
-# 9- Create a vector layer and add fields to it
+---
+title: "9- Creating Vector Layers and Adding Fields in PyQGIS: A Step-by-Step Guide"
+datePublished: Fri Jun 25 2021 08:12:15 GMT+0000 (Coordinated Universal Time)
+cuid: ckqc23fjl0aod2ys196ns3r7t
+slug: 9-creating-vector-layers-and-adding-fields-in-pyqgis-a-step-by-step-guide
+tags: programming-blogs, python, learning, gis
 
-Firstly, create a new *QgsVectorLayer*
-```
+---
+
+Are you looking to create vector layers and add fields in PyQGIS? Look no further! In this step-by-step guide, we will walk you through the process of creating a new QgsVectorLayer, adding an attribute table, updating fields, and adding new features to your layer. We will also cover how to update the layer's extent and add a list of items to your fields. Whether you're a seasoned PyQGIS user or just starting out, this guide is perfect for anyone looking to enhance their skills and take their geospatial data analysis to the next level. So, let's dive in!
+
+Firstly, create a new *QgsVectorLayer:*
+
+```plaintext
 vl = QgsVectorLayer("Point", "shapefile", "memory")
 ```
 
-Add attribute table
+Next, add an attribute table:
 
-```
+```plaintext
 from qgis.PyQt.QtCore import QVariant
 pr = vl.dataProvider()
 pr.addAttributes([QgsField("City", QVariant.String),
@@ -15,9 +25,9 @@ pr.addAttributes([QgsField("City", QVariant.String),
                   QgsField("Area", QVariant.Double)])
 ```
 
-Use *updateFields()* to fetch changes from the provider
+Next, use *updateFields()* to fetch changes from the provider:
 
-```
+```plaintext
 vl.updateFields()
 
 fet = QgsFeature()
@@ -25,16 +35,17 @@ fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(44.01,36.19)))
 fet.setAttributes(["Erbil", 2000000, 300])
 pr.addFeature(fet)
 ```
+
 After new features have been added, we update layer's extent
-```
+
+```plaintext
 vl.updateExtents()
 QgsProject.instance().addMapLayer(vl)
-``` 
+```
 
 ### Add a list of items to the fields
 
- 
-```
+```plaintext
 vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
 
 from qgis.PyQt.QtCore import QVariant
@@ -46,9 +57,10 @@ vl.updateFields()
 
 QgsProject.instance().addMapLayer(vl)
 ```
+
 Add a list of items:
 
-```
+```plaintext
 f1 = QgsFeature()
 f1.setAttributes(['Erbil', '2932800', '14872'])
 f1.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(44.01,36.19)))
@@ -68,8 +80,8 @@ f4.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(45.98,35.17)))
 vl.dataProvider().addFeatures([f1, f2, f3, f4])
 
 vl.updateExtents()
-``` 
+```
 
-<blockquote>
-<p>If you like the content, please <a target="_blank" href="https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1">SUBSCRIBE</a> to my channel for the future content</p>
-</blockquote>
+In conclusion, this step-by-step guide provides a comprehensive overview of creating vector layers and adding fields in PyQGIS. The guide covers essential topics such as creating a new QgsVectorLayer, adding an attribute table, updating fields, and adding new features to your layer. Additionally, the guide also covers how to update the layer's extent and add a list of items to your fields. Whether you're an experienced PyQGIS user or just starting, this guide is an excellent resource to enhance your skills and take your geospatial data analysis to the next level.
+
+> If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

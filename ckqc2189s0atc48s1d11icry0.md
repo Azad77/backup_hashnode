@@ -12,8 +12,8 @@ Are you a PyQGIS user struggling with validating raster layers? Look no further!
 Load a raster layer:
 
 ```plaintext
-uri = "D:/Python_QGIS/data/dem_subset.tif"
-rlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
+>>> uri = "D:/Python_QGIS/data/dem_subset.tif"
+>>> rlayer = iface.addRasterLayer(uri, "my_raster", "gdal")
 ```
 
 Check if the raster layer is valid or not:
@@ -25,7 +25,7 @@ else:
     print("This is invalid raster layer!")
 ```
 
-If the layer is valid, you're good to go! If the layer is not valid, there may be an issue with the layer's metadata, projection, or data format. You can try re-saving the layer in a different format or checking the metadata to see if there are any errors.  
+If the layer is valid, you're good to go! If the layer is not valid, there may be an issue with the layer's metadata, projection, or data format. You can try re-saving the layer in a different format or checking the metadata to see if there are any errors.
 
 In conclusion, checking the validity of a raster layer is an important step in ensuring that it can be used effectively in a PyQGIS project. By following the steps outlined in this article, PyQGIS users can easily determine whether their raster layer is valid or not. Additionally, if the layer is not valid, users can take steps to troubleshoot and resolve any issues. Remember to always validate your raster layers before using them in a project!
 

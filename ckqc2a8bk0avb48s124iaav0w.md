@@ -1,8 +1,8 @@
 ---
-title: "13- Chaining Processings in PyQGIS"
+title: "13- Chaining PyQGIS Processes: A Step-by-Step Guide with Real-World Data from Erbil, Iraq."
 datePublished: Fri Jun 25 2021 08:17:33 GMT+0000 (Coordinated Universal Time)
 cuid: ckqc2a8bk0avb48s124iaav0w
-slug: 13-chaining-processings-in-pyqgis
+slug: 13-chaining-pyqgis-processes-a-step-by-step-guide-with-real-world-data-from-erbil-iraq
 tags: programming-blogs, python, learning, gis
 
 ---

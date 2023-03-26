@@ -13,8 +13,9 @@ First, create a vector layer:
 
 ```python
 from qgis.PyQt.QtCore import QVariant
-vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
+from qgis.core import edit
 
+vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
 
 pr = vl.dataProvider()
 ```
@@ -65,9 +66,10 @@ with edit(vl):
 The complete code is:
 
 ```python
-from qgis.PyQt.QtCore import QVariant # import QVariant
-vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory") # define vector layer
+from qgis.PyQt.QtCore import QVariant
+from qgis.core import edit
 
+vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
 pr = vl.dataProvider()
 
 # add attributes

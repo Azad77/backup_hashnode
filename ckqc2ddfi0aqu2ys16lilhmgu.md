@@ -12,28 +12,27 @@ Are you struggling with computing new field values in PyQGIS? Look no further! I
 First, create a vector layer:
 
 ```python
-pythonCopy codevl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
-
 from qgis.PyQt.QtCore import QVariant
+vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory")
+
+
 pr = vl.dataProvider()
 ```
 
 Next, add an attributed table to it:
 
 ```python
-pythonCopy codepr.addAttributes([QgsField("City", QVariant.String),
+pr.addAttributes([QgsField("City", QVariant.String),
                   QgsField("Population",  QVariant.Double),
                   QgsField("Area", QVariant.Double),
                   QgsField("Density", QVariant.Double)])
 vl.updateFields()
-
-QgsProject.instance().addMapLayer(vl)
 ```
 
 Then, define your data:
 
 ```python
-pythonCopy codemy_data = [
+my_data = [
     {'x': 44.01, 'y': 36.19, 'City': 'Erbil', 'Population': 2932800, 'Area': 14872},
     {'x': 45.43, 'y': 35.55, 'City': 'Sulaymania', 'Population': 1967000, 'Area': 20143},
     {'x': 42.99, 'y': 36.86, 'City': 'Duhok', 'Population': 1292535, 'Area': 10955},
@@ -43,7 +42,7 @@ pythonCopy codemy_data = [
 After that, add data to the fields:
 
 ```python
-pythonCopy codefor rec in my_data:
+for rec in my_data:
     f = QgsFeature()
     pt = QgsPointXY(rec['x'], rec['y'])
     f.setGeometry(QgsGeometry.fromPointXY(pt))
@@ -57,7 +56,47 @@ QgsProject.instance().addMapLayer(vl)
 The **density** field is currently empty, and we will compute it with a for loop:
 
 ```python
-pythonCopy codewith edit(vl):
+with edit(vl):
+    for f in vl.getFeatures():
+        f['Density'] = f['Population'] / f['Area']
+        vl.updateFeature(f)
+```
+
+The complete code is:
+
+```python
+from qgis.PyQt.QtCore import QVariant # import QVariant
+vl = QgsVectorLayer("Point", "Cities_Kurdistan", "memory") # define vector layer
+
+pr = vl.dataProvider()
+
+# add attributes
+pr.addAttributes([QgsField("City", QVariant.String),
+                  QgsField("Population",  QVariant.Double),
+                  QgsField("Area", QVariant.Double),
+                  QgsField("Density", QVariant.Double)])
+vl.updateFields()
+
+#define your data
+my_data = [
+    {'x': 44.01, 'y': 36.19, 'City': 'Erbil', 'Population': 2932800, 'Area': 14872},
+    {'x': 45.43, 'y': 35.55, 'City': 'Sulaymania', 'Population': 1967000, 'Area': 20143},
+    {'x': 42.99, 'y': 36.86, 'City': 'Duhok', 'Population': 1292535, 'Area': 10955},
+    {'x': 45.98, 'y': 35.17, 'City': 'Halabja', 'Population': 109000, 'Area': 889}]
+
+# add data to the fields    
+for rec in my_data:
+    f = QgsFeature()
+    pt = QgsPointXY(rec['x'], rec['y'])
+    f.setGeometry(QgsGeometry.fromPointXY(pt))
+    f.setAttributes([rec['City'], rec['Population'], rec['Area']])
+    pr.addFeature(f)
+ 
+vl.updateExtents() 
+QgsProject.instance().addMapLayer(vl)
+
+# compute "Density":
+with edit(vl):
     for f in vl.getFeatures():
         f['Density'] = f['Population'] / f['Area']
         vl.updateFeature(f)

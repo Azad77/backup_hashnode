@@ -7,11 +7,11 @@ tags: programming-blogs, python, learning, gis
 
 ---
 
-The article explains how to streamline GeoPackage layer loading in PyQGIS with custom functions. It provides examples of functions to add new layers, multiple layers, and all layers. It also includes a link to download sample data.
+In this article, we explain how to streamline GeoPackage layer loading in PyQGIS using custom functions. It provides examples of functions to add new layers, multiple layers, and all layers. It also includes a link to download sample data.
 
-To get started, we need to download sample data in the GeoPackage format. The article provides a [link](https://github.com/Azad77/Python_qgis/blob/main/Data/osopentoid_202105_gpkg_sr.zip) to download a GeoPackage file containing sample data. Once downloaded, we can unzip the file and load it into PyQGIS.
+To get started, we need to download sample data in the GeoPackage format. We provide a [link](https://github.com/Azad77/Python_qgis/blob/main/Data/osopentoid_202105_gpkg_sr.zip) to download a GeoPackage file containing sample data. Once downloaded, we can unzip the file and load it into PyQGIS.
 
-First, loading a list of layer names in the GeoPackage:
+First, load a list of layer names in the GeoPackage:
 
 ```python
 from osgeo import ogr
@@ -24,7 +24,7 @@ print('london_boroughs' in gpkg_layers)
 # False (because the layer is not available)
 ```
 
-Writing a function to add new layers:
+Next, write a function to add new layers:
 
 ```python
 def add_layer(gpkg, layer):
@@ -35,32 +35,34 @@ def add_layer(gpkg, layer):
         print('Error: there is no layer named "{}" in {}!'.format(layer, gpkg))
 ```
 
-Use the defined add\_layer function to add a new layer:
+Use the defined ***add\_layer*** function to add a new layer:
 
 ```python
 add_layer(gpkg1, 'os_mastermap_topography_layer')
 ```
 
-Function to add multiple layers:
+Then, define a function to add multiple layers:
 
 ```python
 def add_layers(gpkg, layers):
     for layer in layers:
         add_layer(gpkg, layer)
 
+# use add_layers function:
 add_layers(gpkg1, ['os_mastermap_sites_layer', 'os_mastermap_highways_network'])
 ```
 
-A function to add all layers:
+Finally, define a function to add all layers:
 
 ```python
 def add_all_layers(gpkg):
     layers = [n.GetName() for n in ogr.Open(gpkg)]
     add_layers(gpkg, layers)
-    
+
+ # use add_all_layers function:   
 add_all_layers(gpkg1)
 ```
 
-In conclusion, the article provides useful insights into how to streamline GeoPackage layer loading in PyQGIS with custom functions. It offers examples of functions to add new layers, multiple layers, and all layers. The article also includes a link to download sample data, which readers can use to practice the concepts discussed. Overall, this article is a valuable resource for anyone looking to improve their GeoPackage layer loading process in PyQGIS.
+In conclusion, the article provides useful insights into how to streamline GeoPackage layer loading in PyQGIS using custom functions. It offers examples of functions to add new layers, multiple layers, and all layers. The article also includes a link to download sample data, which readers can use to practice the concepts discussed. Overall, this article is a valuable resource for anyone looking to improve their GeoPackage layer loading process in PyQGIS.
 
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

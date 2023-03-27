@@ -7,9 +7,9 @@ tags: tutorial, programming-blogs, python, learning, gis
 
 ---
 
-If you're looking to create QGIS plugins, then you've come to the right place! In this step-by-step guide, we'll show you how to create your own plugin by creating essential files such as metadata.txt and [mainPlugin.py](http://mainPlugin.py), as well as how to use Python to create the **init**.py file. We'll also walk you through how to install your plugin and provide a tip on using the Plugin Builder to create a template for your plugin. Follow these instructions to create your own QGIS plugin and take your GIS analysis to the next level!
+If you're looking to create QGIS plugins, then you've come to the right place! In this step-by-step guide, we'll show you how to create your own plugin by creating essential files such as metadata.txt and [mainPlugin.py](http://mainPlugin.py), as well as how to use Python to create the [**init**.py](http://init.py) file. We'll also walk you through how to install your plugin and provide a tip on using the Plugin Builder to create a template for your plugin. Follow these instructions to create your own QGIS plugin and take your GIS analysis to the next level!
 
-The first requirement for plugins is **metadata.txt**.
+The first requirement for plugins is metadata.txt.
 
 Use a text editor to create a metadata file:
 
@@ -23,13 +23,11 @@ description=This is an example plugin for greeting the world.
 version=version 0.1
 ```
 
-save it as a "metadata" text document.
+Save it as a "metadata" text document.
 
-The second file is called "\_\_init\_\_".py which includes the **classFactory()** method.
+The second file is called "\_\_init\_\_.py" which includes the classFactory() method.
 
-You can use Python to create \_\_init\_\_ file
-
-!\[\_init\_.png\](https://cdn.hashnode.com/res/hashnode/image/upload/v1624029301411/BOurKJv14.png)
+You can use Python to create a "\_\_**init\_\_**.py" file
 
 ```python
 from .mainPlugin import TestPlugin
@@ -37,7 +35,7 @@ def classFactory(iface):
   return TestPlugin(iface)
 ```
 
-The third necessary file contains the main logic of the plugin. It must have **init**(), initGui, and unload method. We name it *mainPlugin.py* file that includes:
+The third necessary file contains the main logic of the plugin. It must have initGui(), unload() and run() methods. We name it "[mainPlugin.py](http://mainPlugin.py)" file that includes:
 
 ```python
 import os
@@ -86,14 +84,14 @@ class TestPlugin:
 
 Save these three files and a logo in one folder and name it "TestPlugin" or the name of the plugin.
 
-Then, copy the file and paste it into QGIS 3 Plugins directory. On my computer it is:
+Then, copy the "TestPlugin" folder and paste it into QGIS 3 Plugins directory. On Windows, it is typically located at:
 
-C:\\Users\\Azad\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python\\plugins
+C:\\Users\\username\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python\\plugins
 
-Restart QGIS software and now you can see your "TestPlugin" plugin in the list of installed plugins.
+Restart QGIS software, and you will be able to see your "TestPlugin" plugin in the list of installed plugins. By clicking on the TestPlugin icon, you can view the "Hello from TestPlugin!" text.
 
-Another method is to use "Plugin Builder" to create your template plugin and then modify it.
+Alternatively, you can use the "Plugin Builder" to create a template plugin and then modify it to suit your needs.
 
-In conclusion, creating QGIS plugins can seem like a daunting task, but with the help of this step-by-step guide, anyone can create their own customized plugin. By following the instructions provided, users can create the necessary files, such as metadata.txt and [mainPlugin.py](http://mainPlugin.py), and use Python to create the [**init**.py](http://init.py) file. The article also provides a tip on using the Plugin Builder to create a template for the plugin. With the plugin created and installed, users can take their GIS analysis to the next level.
+In conclusion, creating QGIS plugins may seem daunting, but this step-by-step guide can help anyone create their customized plugin. By following the instructions provided, users can create necessary files such as metadata.txt and [mainPlugin.py](http://mainPlugin.py), and use Python to create the [init.py](http://init.py) file. The article also provides a tip on using the Plugin Builder to create a template for the plugin. With the plugin created and installed, users can take their GIS analysis to the next level.
 
 > If you like the content, please [SUBSCRIBE](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) to my channel for the future content

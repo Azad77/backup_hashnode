@@ -1,8 +1,8 @@
 ---
-title: "6- Retrieving information of vector layer"
+title: "6- Retrieving information from vector layer"
 datePublished: Fri Jun 25 2021 08:07:11 GMT+0000 (Coordinated Universal Time)
 cuid: ckqc1wwfu0aml2ys1b0d34g90
-slug: 6-retrieving-information-of-vector-layer-1
+slug: 6-retrieving-information-from-vector-layer
 tags: programming-blogs, python, learning, basics, gis
 
 ---

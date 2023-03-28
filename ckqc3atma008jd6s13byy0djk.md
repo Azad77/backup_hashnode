@@ -1,8 +1,8 @@
 ---
-title: "27- External resources of learning Python QGIS"
+title: "27- External resources for learning Python QGIS"
 datePublished: Fri Jun 25 2021 08:46:00 GMT+0000 (Coordinated Universal Time)
 cuid: ckqc3atma008jd6s13byy0djk
-slug: 27-external-resources-of-learning-python-qgis
+slug: 27-external-resources-for-learning-python-qgis
 tags: tutorial, programming-blogs, python, learning, gis
 
 ---

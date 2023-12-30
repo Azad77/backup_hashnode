@@ -91,7 +91,7 @@ This code performs spatial interpolation of rain data using kriging, enabling th
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1703965027195/86705c89-ae08-4726-9af9-361206023565.png align="center")
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1703965046671/8e596f33-e9cb-4a74-a628-f26ca777bab4.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1703965179020/dde4bdbd-0b53-42db-9a7a-b7f693714095.png align="center")
 
 **The full code is presented below:**
 

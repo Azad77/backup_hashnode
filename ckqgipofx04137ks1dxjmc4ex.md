@@ -3,6 +3,7 @@ title: "13- SciPy library"
 datePublished: Mon Jun 28 2021 11:08:32 GMT+0000 (Coordinated Universal Time)
 cuid: ckqgipofx04137ks1dxjmc4ex
 slug: 13-scipy-library
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704014965670/5401df82-b4c7-45ee-9352-fd0c08d6a05f.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

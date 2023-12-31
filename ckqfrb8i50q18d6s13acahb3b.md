@@ -3,6 +3,7 @@ title: "11- Directories and files"
 datePublished: Sun Jun 27 2021 22:21:29 GMT+0000 (Coordinated Universal Time)
 cuid: ckqfrb8i50q18d6s13acahb3b
 slug: 11-directories-and-files
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704015479775/875891c8-9b6c-45ea-b3e0-2c6d27db4a84.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

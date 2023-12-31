@@ -1,4 +1,12 @@
-# 15- Learning statistics in Python
+---
+title: "15- Learning statistics in Python"
+datePublished: Thu Jul 01 2021 12:38:18 GMT+0000 (Coordinated Universal Time)
+cuid: ckqkw8od600pcejs16dffdedx
+slug: 15-learning-statistics-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704014630873/17f5c953-a822-457b-bc88-385427c0192a.jpeg
+tags: tutorial, statistics, python, learning, programming-languages
+
+---
 
 In this tutorial, you learn how to perform in Python descriptive statistics (i.e min and max), central tendency (i.e. mean and median), variability (i.e. variance and standard deviation), summary, correlation (i.e. covariance and correlation coefficient), and statistical tests (i.e. t-test). We use statistical powerful libraries such as scipy.stats function in SciPy library, scikit-learn, statsmodels, and other libraries.
 

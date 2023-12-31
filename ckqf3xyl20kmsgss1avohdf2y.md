@@ -3,6 +3,7 @@ title: "9- Modules in Python"
 datePublished: Sun Jun 27 2021 11:27:18 GMT+0000 (Coordinated Universal Time)
 cuid: ckqf3xyl20kmsgss1avohdf2y
 slug: 9-modules-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704016074398/13c314d3-c733-4ef0-b6c0-938173783828.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

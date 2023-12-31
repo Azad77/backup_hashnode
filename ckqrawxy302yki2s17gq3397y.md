@@ -3,6 +3,7 @@ title: "16- Case study one: LAI and LST of China and India"
 datePublished: Tue Jul 06 2021 00:15:42 GMT+0000 (Coordinated Universal Time)
 cuid: ckqrawxy302yki2s17gq3397y
 slug: 16-case-study-one-lai-and-lst-of-china-and-india
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704014124795/99b7ce63-c072-4503-b742-c50c8a0ced80.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

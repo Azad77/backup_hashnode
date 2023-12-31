@@ -3,6 +3,7 @@ title: "14- Plotting in Python"
 datePublished: Mon Jun 28 2021 21:27:05 GMT+0000 (Coordinated Universal Time)
 cuid: ckqh4t5bi0alz7ks1ecaw4n2f
 slug: 14-plotting-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704014296780/7ffe2970-3e8b-47d7-8df9-0a0552bf50c9.avif
 tags: tutorial, python, research, learning, programming-languages
 
 ---

@@ -3,6 +3,7 @@ title: "10- Python file handling"
 datePublished: Sun Jun 27 2021 19:38:41 GMT+0000 (Coordinated Universal Time)
 cuid: ckqflhvfo0olhgss1e7cxdlhk
 slug: 10-python-file-handling
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704015884453/637ea82f-5ba5-4bac-ab67-8dd90b26b03f.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

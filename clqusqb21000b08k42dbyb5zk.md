@@ -3,7 +3,7 @@ title: "3- 🌟 Pykid Functions 🌟"
 datePublished: Mon Jan 01 2024 10:47:08 GMT+0000 (Coordinated Universal Time)
 cuid: clqusqb21000b08k42dbyb5zk
 slug: 3-pykid-functions
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1704107013696/016f7627-41e8-40f0-af33-cb1efd68fd89.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1704107214747/18e8b317-3a42-4a2a-ae06-e38df5080b6c.png
 tags: functions, python, functional-programming, kids
 
 ---

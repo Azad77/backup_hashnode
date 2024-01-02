@@ -10,7 +10,11 @@ tags: python, package, pypi
 
 Are you looking for a step-by-step guide to packaging and publishing your Python projects on PyPI? Look no further! This comprehensive guide will walk you through everything you need to know, from organizing your files and creating a package to uploading it to PyPI for easy installation using pip. With clear instructions and helpful examples, you'll be able to share your Python projects with the world in no time.
 
-In this guide, a straightforward project called "smartrs" is utilized. However, you can substitute your name instead to generate a distinct package name that won't clash with packages uploaded by other individuals who are also following this tutorial. Make the subsequent arrangement of files and folders on your computer's storage device:
+In this guide, a straightforward project called "smartrs" is utilized. However, you can substitute your name instead to generate a distinct package name that won't clash with packages uploaded by other individuals who are also following this tutorial.
+
+**Step 1: Organizing Your Project Files:**
+
+Make the subsequent arrangement of files and folders on your computer's storage device:
 
 ```python
 packaging/
@@ -27,7 +31,7 @@ def add_ten(number):
      return number + 10
 ```
 
-**Generating the files necessary for the package:**
+**Step 2: Generating Necessary Files:**
 
 To prepare the project for distribution, you need to include certain files in the package. Once you've completed this step, the structure of the project will resemble the following:
 
@@ -78,6 +82,8 @@ classifiers = [
 "Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
 ```
 
+**Step 3: Preparing README and License:**
+
 **Prepare README.md:**
 
 Access the [README.md](http://README.md) file and input the subsequent information:
@@ -116,7 +122,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-**Create distributing archives:**
+**Step 4: Creating Distribution Archives:**
 
 The subsequent action is to create distribution packages for the software package. These archives are produced and then uploaded to the Python Package Index, where they can be installed using pip.
 
@@ -136,7 +142,7 @@ dist/
 
 The `tar.gz` file is a [source distribution](https://packaging.python.org/en/latest/glossary/#term-Source-Distribution-or-sdist) whereas the `.whl` file is a [built distribution](https://packaging.python.org/en/latest/glossary/#term-Built-Distribution).
 
-**Upload the package to PyPI:**
+**Step 5: Uploading to PyPI:**
 
 To begin, your initial task is to create a PyPI account by completing the registration process.
 
@@ -169,6 +175,8 @@ Successfully built smartrs
 Installing collected packages: smartrs 
 Successfully installed smartrs-0.0.1
 ```
+
+**Step 6: Verifying Installation:**
 
 One way to verify that the package was installed properly is by importing it and running a test.
 

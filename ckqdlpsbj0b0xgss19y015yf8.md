@@ -3,6 +3,7 @@ title: "4- Install and run jupyter notebook platform"
 datePublished: Sat Jun 26 2021 10:09:17 GMT+0000 (Coordinated Universal Time)
 cuid: ckqdlpsbj0b0xgss19y015yf8
 slug: 4-install-and-run-jupyter-notebook-platform
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217398418/44cdf151-3ac9-415c-81d0-ca44a19d8926.jpeg
 tags: tutorial, python, research, learning, programming-languages
 
 ---

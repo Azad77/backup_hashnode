@@ -3,6 +3,7 @@ title: "8- Functions"
 datePublished: Sun Jun 27 2021 09:44:11 GMT+0000 (Coordinated Universal Time)
 cuid: ckqf09cil0kfcd6s12iup86lg
 slug: 8-functions
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704216641312/0630dc2d-af2e-48e2-ac4c-810e05f33870.jpeg
 tags: tutorial, python, research, learning, programming-languages
 
 ---

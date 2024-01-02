@@ -3,6 +3,7 @@ title: "5- Run a Python program"
 datePublished: Sat Jun 26 2021 10:26:54 GMT+0000 (Coordinated Universal Time)
 cuid: ckqdmcfhi0bpfd6s1exb893by
 slug: 5-run-a-python-program
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704216831608/a730fd11-3bdd-4848-89e1-ccc6b98dbf78.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

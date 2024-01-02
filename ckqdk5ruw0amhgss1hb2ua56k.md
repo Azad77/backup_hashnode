@@ -3,6 +3,7 @@ title: "3- Create environments and install packages"
 datePublished: Sat Jun 26 2021 09:25:44 GMT+0000 (Coordinated Universal Time)
 cuid: ckqdk5ruw0amhgss1hb2ua56k
 slug: 3-create-environments-and-install-packages
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217268858/9e653d7f-7566-46fa-b988-ceaeee022a53.jpeg
 tags: tutorial, python, research, learning, programming-languages
 
 ---

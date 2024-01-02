@@ -3,6 +3,7 @@ title: "1- Introduction to Python"
 datePublished: Fri Jun 25 2021 23:32:07 GMT+0000 (Coordinated Universal Time)
 cuid: ckqcyyds607crd6s1eu0se6as
 slug: 1-introduction-to-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217648221/9d17edb4-a279-4d51-8133-43c7dceb0f22.jpeg
 tags: tutorial, python, research, learning, programming-languages
 
 ---

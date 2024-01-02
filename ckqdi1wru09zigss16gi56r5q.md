@@ -3,6 +3,7 @@ title: "2- Install Python through Miniconda"
 datePublished: Sat Jun 26 2021 08:26:45 GMT+0000 (Coordinated Universal Time)
 cuid: ckqdi1wru09zigss16gi56r5q
 slug: 2-install-python-through-miniconda
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217555170/49436055-edd3-4c21-a5c2-19db3114a3ff.jpeg
 tags: tutorial, programming-blogs, python, research, learning
 
 ---

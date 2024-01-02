@@ -3,6 +3,7 @@ title: "Step-by-Step Guide to Packaging and Publishing Python Projects on PyPI"
 datePublished: Mon Mar 13 2023 23:13:59 GMT+0000 (Coordinated Universal Time)
 cuid: clf7fybef000009mj92c44gne
 slug: step-by-step-guide-to-packaging-and-publishing-python-projects-on-pypi
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217863699/c3d513ed-4846-4008-92b6-6e92815ad856.jpeg
 tags: python, package, pypi
 
 ---

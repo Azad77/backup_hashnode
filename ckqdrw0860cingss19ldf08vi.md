@@ -3,6 +3,7 @@ title: "6- Types of data in Python"
 datePublished: Sat Jun 26 2021 13:02:05 GMT+0000 (Coordinated Universal Time)
 cuid: ckqdrw0860cingss19ldf08vi
 slug: 6-types-of-data-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704217104708/fedd9ad8-a2e4-43b8-8908-2eba1a04751e.jpeg
 tags: tutorial, python, data-science, research, learning
 
 ---

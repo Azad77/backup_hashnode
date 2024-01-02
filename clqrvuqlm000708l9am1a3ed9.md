@@ -1,5 +1,5 @@
 ---
-title: "1- Welcome and variables"
+title: "1- 🌟Welcome and variables🌟"
 datePublished: Sat Dec 30 2023 09:51:15 GMT+0000 (Coordinated Universal Time)
 cuid: clqrvuqlm000708l9am1a3ed9
 slug: 1-welcome-and-variables

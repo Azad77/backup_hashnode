@@ -3,6 +3,7 @@ title: "7- Control flow in Python"
 datePublished: Sat Jun 26 2021 22:32:07 GMT+0000 (Coordinated Universal Time)
 cuid: ckqec92cc0g9bgss1aisk61o2
 slug: 7-control-flow-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704216590694/1aec03d6-3d3a-4dd4-b219-1f4784d5a23e.png
 tags: tutorial, python, research, learning, programming-languages
 
 ---

@@ -3,6 +3,7 @@ title: "2- Functions in R Programming"
 datePublished: Thu Jul 15 2021 22:49:31 GMT+0000 (Coordinated Universal Time)
 cuid: ckr5i8n3805m7sls1eszbdpoz
 slug: 2-functions-in-r-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704397892743/bab6d951-5d38-4e61-97b3-f8b75cd383cb.gif
 tags: tutorial, functions, r, research, programming-languages
 
 ---

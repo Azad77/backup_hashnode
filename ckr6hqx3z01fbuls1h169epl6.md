@@ -3,6 +3,7 @@ title: "4- Importing data to R Programming"
 datePublished: Fri Jul 16 2021 15:23:31 GMT+0000 (Coordinated Universal Time)
 cuid: ckr6hqx3z01fbuls1h169epl6
 slug: 4-importing-data-to-r-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704397701498/5776d6f5-e4fd-4fe6-9a80-ff11b772e383.gif
 tags: tutorial, data-science, r, research, programming-languages
 
 ---

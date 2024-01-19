@@ -155,10 +155,19 @@ pip install --upgrade twine
 After installing, execute Twine to upload all the files stored in the dist folder.
 
 ```python
-twine upload dist/*.tar.gz
+twine upload --verbose dist/*
+# username: __token__
+# password: pypi-AgEIcHlwaS5vcmc..... (your token)
 ```
 
 You will be prompted for a username and password for your PyPI account.
+
+To use an API token:
+
+* Set your username to `__token__`
+    
+* Set your password to the token value, including the `pypi-` prefix
+    
 
 Once uploaded, your package should be viewable on PyPI; for example:
 

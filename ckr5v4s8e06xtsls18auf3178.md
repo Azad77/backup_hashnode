@@ -3,6 +3,7 @@ title: "3- Packages in R Programming"
 datePublished: Fri Jul 16 2021 04:50:27 GMT+0000 (Coordinated Universal Time)
 cuid: ckr5v4s8e06xtsls18auf3178
 slug: 3-packages-in-r-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707126065195/d21486c8-63e5-4b20-a732-d71b7344d6d6.gif
 tags: tutorials, r, research, package, programming-languages
 
 ---

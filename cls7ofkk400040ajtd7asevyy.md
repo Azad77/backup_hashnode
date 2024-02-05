@@ -3,7 +3,7 @@ title: "16- Analyzing Annual Weather Data with R"
 datePublished: Sun Feb 04 2024 15:47:31 GMT+0000 (Coordinated Universal Time)
 cuid: cls7ofkk400040ajtd7asevyy
 slug: 16-analyzing-annual-weather-data-with-r
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707061640833/1ac8a7c0-7e7e-4cd4-8e14-2476cf233abf.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707124207947/6ea665f8-ec6a-4697-9358-dd28db34e9bf.gif
 tags: functions, r, weather
 
 ---

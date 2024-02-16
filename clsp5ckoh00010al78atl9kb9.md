@@ -1,8 +1,8 @@
 ---
-title: "Wind Rose Plots for Different Time Periods"
+title: "17- Wind Rose Plots for Different Time Periods"
 datePublished: Fri Feb 16 2024 21:13:10 GMT+0000 (Coordinated Universal Time)
 cuid: clsp5ckoh00010al78atl9kb9
-slug: wind-rose-plots-for-different-time-periods
+slug: 17-wind-rose-plots-for-different-time-periods
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1708117774184/82b93611-bbbf-44e3-8961-1f7f76fe443d.png
 tags: r, plots, windrose, openair, worldmet
 

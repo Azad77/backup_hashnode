@@ -358,49 +358,60 @@ his.set_ylabel('Frequency', fontsize=12) # set y label
 ### Animated plot in Python
 
 ```python
-### Animated plot in Python
+import pandas as pd
+import matplotlib.pyplot as plt
+from PIL import Image
+import io
 
-# read the data 
+# Read the data
 data = pd.read_csv(r'd://myPub1.csv')
+
 # Check the first 5 rows
 data.head(5)
 
-# And I need to transform my categorical column (continent) in a numerical value group1->1, group2->2...
-data['Open']=pd.Categorical(data['Open'])
+# Transform the categorical column (Open) into numerical values
+data['Open'] = pd.Categorical(data['Open'])
+
+# Initialize a list to store images
+images = []
 
 # For each year:
 for i in data.Year.unique():
- 
     # Turn interactive plotting off
     plt.ioff()
 
-    # initialize a figure
+    # Initialize a figure
     fig = plt.figure(figsize=(10, 6))
-    
+
     # Find the subset of the dataset for the current year
-    subsetData = data[ data.Year == i ]
+    subsetData = data[data.Year == i]
 
     # Build the scatterplot
     plt.scatter(
-        x=subsetData['Cum_Publications'], 
-        y=subsetData['Cum_Citations'], 
-        s=subsetData['Cum_Citations']*15, 
-        edgecolors="white", linewidth=2, color = 'midnightblue')
-    
+        x=subsetData['Cum_Publications'],
+        y=subsetData['Cum_Citations'],
+        s=subsetData['Cum_Citations'] * 15,
+        edgecolors="white", linewidth=2, color='midnightblue')
+
     # Add titles (main and on axis)
     plt.yscale('linear')
     plt.xlabel("Publication")
-    plt.ylabel("Citation"),
-    plt.title("Azad Rasul's Cumulative Publications and Citations during: "+str(i) )
+    plt.ylabel("Citation")
+    plt.title("Azad Rasul's Cumulative Publications and Citations during: " + str(i))
     plt.ylim(-50, 500)
     plt.xlim(0, 25)
-    
-    # Save it & close the figure
-    filename='/Users/Azad/Desktop/test/myPubCum'+str(i)+'.png'
-    plt.savefig(fname=filename, dpi=96)
-    plt.gca()
+
+    # Save the current plot as an image
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    images.append(Image.open(buf))
+
+    # Close the figure to avoid memory issues
     plt.close(fig)
-# To convert a list of png figures to a gif video online, use a website such as https://gifmaker.me/.
+
+# Save the list of images as a GIF
+images[0].save('myPubCumulative_animation.gif', save_all=True, append_images=images[1:], optimize=False, duration=200, loop=0)
 ```
 
 ![Webp.net-gifmaker (4).gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1648405976422/eEN16VPKb.gif align="left")
@@ -408,38 +419,33 @@ for i in data.Year.unique():
 #### Animated scatterplot
 
 ```python
-#### Animated scatterplot 
+import pandas as pd
+import matplotlib.pyplot as plt
+from PIL import Image
+import io  # Import io module for working with in-memory files
 
-# read the data (on the web)
+# Read the data (on the web)
 data = pd.read_csv('https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/gapminderData.csv')
 
 # Check the first 2 rows
 data.head(10)
 
-
-# And I need to transform my categorical column (continent) in a numerical value group1->1, group2->2...
-data['continent']=pd.Categorical(data['continent'])
+# And I need to transform my categorical column (continent) into a numerical value group1->1, group2->2...
+data['continent'] = pd.Categorical(data['continent'])
 
 # Set the figure size
 plt.figure(figsize=(10, 10))
 
 # Subset of the data for year 1952
-data1952 = data[ data.year == 1952 ]
+data1952 = data[data.year == 1952]
 
-# image resolution
-dpi=96
+# Initialize a list to store images
+images = []
 
 # For each year:
 for i in data.year.unique():
- 
-    # Turn interactive plotting off
-    plt.ioff()
-
-    # initialize a figure
-    fig = plt.figure(figsize=(680/dpi, 480/dpi), dpi=dpi)
-    
     # Find the subset of the dataset for the current year
-    subsetData = data[ data.year == i ]
+    subsetData = data[data.year == i]
 
     # Build the scatterplot
     plt.scatter(
@@ -448,21 +454,25 @@ for i in data.year.unique():
         s=subsetData['pop']/200000 , 
         c=subsetData['continent'].cat.codes, 
         cmap="Accent", alpha=0.6, edgecolors="white", linewidth=2)
-    
+
     # Add titles (main and on axis)
     plt.yscale('log')
     plt.xlabel("Life Expectancy")
     plt.ylabel("GDP per Capita")
-    plt.title("Year: "+str(i) )
-#    plt.ylim(0,100000)
+    plt.title("Year: " + str(i))
     plt.xlim(30, 90)
-    
-    # Save it & close the figure
-    filename='/Users/Azad/Desktop/test/Gapminder_step'+str(i)+'.png'
-    plt.savefig(fname=filename, dpi=96)
-    plt.gca()
-    plt.close(fig)
-# conver to gif video online: https://gifmaker.me/
+
+    # Save the current plot as an image
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    images.append(Image.open(buf))
+
+    # Clear the current plot for the next iteration
+    plt.clf()
+
+# Save the list of images as a GIF
+images[0].save('Gapminder_animation.gif', save_all=True, append_images=images[1:], optimize=False, duration=200, loop=0)
 ```
 
 ![Webp.net-gifmaker (5).gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1648406042869/e9PT93NDZ.gif align="left")

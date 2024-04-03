@@ -1,8 +1,8 @@
 ---
-title: "Create a basic chatbot"
+title: "Create a basic chatbot in Python"
 datePublished: Mon Apr 01 2024 09:55:57 GMT+0000 (Coordinated Universal Time)
 cuid: clugryzrb000108lbclyq8ync
-slug: create-a-basic-chatbot
+slug: create-a-basic-chatbot-in-python
 tags: python, python3, chatbot
 
 ---

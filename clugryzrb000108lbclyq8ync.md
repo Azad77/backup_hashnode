@@ -1,8 +1,8 @@
 ---
-title: "Chatbot"
+title: "Create a basic chatbot"
 datePublished: Mon Apr 01 2024 09:55:57 GMT+0000 (Coordinated Universal Time)
 cuid: clugryzrb000108lbclyq8ync
-slug: chatbot
+slug: create-a-basic-chatbot
 tags: python, python3, chatbot
 
 ---

@@ -115,8 +115,8 @@ library(openair)   # Package for air quality data analysis and visualization
 library(worldmet)
 
 # Define the start and end years for the period
-start_year <- 2014
-end_year <- 2023
+start_year <- 2020
+end_year <- 2022
 
 # Define the start and end months for each season
 seasons <- list(

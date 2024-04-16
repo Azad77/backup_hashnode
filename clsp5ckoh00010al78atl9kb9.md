@@ -51,8 +51,8 @@ dev.off()
 
 ```r
 # Define the start and end years for the period
-start_year <- 2014
-end_year <- 2023
+start_year <- 2020
+end_year <- 2022
 
 # Initialize an empty list to store wind rose plots for each month
 windrose_plots <- list()

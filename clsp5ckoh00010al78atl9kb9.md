@@ -50,10 +50,6 @@ dev.off()
 ### 2\. Wind Rose Plots for Specific Months from 2014 to 2023
 
 ```r
-# Load necessary packages
-library(openair)   # Package for air quality data analysis and visualization
-library(worldmet)  # Package for importing NOAA weather data
-
 # Define the start and end years for the period
 start_year <- 2014
 end_year <- 2023
@@ -107,7 +103,6 @@ for (month in 1:12) {
   print(windrose_plots[[month]])
   dev.off()
 }
-
 ```
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1708117691883/fb3aa867-caac-4c82-89ba-923f7e32198e.png align="center")

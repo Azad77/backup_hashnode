@@ -40,7 +40,7 @@ import_and_calculate_means <- function(year) {
   annual_data <- numeric_data %>%
     group_by(year) %>%
     #summarize(across(everything(), sum, na.rm = TRUE))
-    summarzie(across(everything(), mean, na.rm = TRUE))
+    summarize(across(everything(), mean, na.rm = TRUE))
 
   # Show the resulting annual aggregated data
   print(annual_data)

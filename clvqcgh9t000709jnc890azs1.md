@@ -188,8 +188,6 @@ lines(history$metrics$val_acc, col="green")
 
 # Add Legend
 legend("bottomright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
-
-
 ```
 
 Lastly, we **evaluate our model** on the test data to see how well it performs on unseen data. We **print out** the evaluation score to see its performance.
@@ -211,7 +209,7 @@ First, we **initialize our sequential model**, which is like a blank canvas wait
 
 ```r
 # Initialize the sequential model
-model2 <- keras_model_sequential() 
+model2 <- keras_model_sequential()
 ```
 
 Now, let's add layers to our model. We start by adding a dense layer with 8 units. Think of units as little computational blocks. We use the ReLU activation function, which helps the network learn complex patterns. Since this is our first layer, we need to specify the input shape, which is (4,). This means our data has 4 features.
@@ -285,7 +283,7 @@ Alright, let's dive into **building our third model**, which we'll creatively ca
 ```r
 # Hidden Units:
 # Initialize a sequential model
-model3 <- keras_model_sequential() 
+model3 <- keras_model_sequential()
 ```
 
 Next, we **add layers to our model**. The first layer we add is what we call a "dense" layer. This layer has 28 hidden units. These units are like small computational hubs that process information. We use a "ReLU" activation function here, which helps introduce non-linearity into our model, allowing it to learn complex patterns from the data.
@@ -566,5 +564,7 @@ score3 <- model3 %>% evaluate(iris.test, iris.testLabels, batch_size = 128)
 
 # Print the score
 print(score3)
-Source of the code: https://rpubs.com/Nilafhiosagam/541333
+# Source of the code: https://rpubs.com/Nilafhiosagam/541333
 ```
+
+#### Source of the code: [https://rpubs.com/Nilafhiosagam/541333](https://rpubs.com/Nilafhiosagam/541333)

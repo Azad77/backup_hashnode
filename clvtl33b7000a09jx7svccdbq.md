@@ -30,7 +30,7 @@ Hello everyone, in today's tutorial, we're going to dive into Random Forest clas
 
 * **Black Box Model:** Random forests can be complex, making it tricky to interpret how they make predictions.
     
-* **High Computational Demands:** Building large random forests requires substantial computer power, especially with big datasets. 
+* **High Computational Demands:** Building large random forests requires substantial computer power, especially with big datasets.
     
 
 ## Enhancing Crop Classification Accuracy with GEE: A Case Study
@@ -203,7 +203,7 @@ Map.addLayer(classified_sar, { min: 0, max: 5, palette: ['1667fa', 'c9270d', 'cf
 var validated_sar = validation_newfc1.classify(classifier_sar);
 ```
 
-###  **Sentinel-2A Classification**
+### **Sentinel-2A Classification**
 
 Now, let's move on to Sentinel-2A Classification. We'll start by defining the bands to be used for classification. In addition to the spectral bands (blue, green, red, red\_edge, and nir), we'll also include NDVI as a feature. This comprehensive set of features will help us effectively classify land cover types.
 
@@ -235,7 +235,7 @@ print('RF S2 Validation error matrix: ', testAccuracy);
 print('RF S2 Validation overall accuracy: ', testAccuracy.accuracy());
 ```
 
-###  **Combine SAR and Sentinel-2 Classification**
+### **Combine SAR and Sentinel-2 Classification**
 
 Let's now **combine SAR and Sentinel-2 Classification**. To achieve this, we'll define both SAR and optical bands to train the classifier. This includes bands from the optical imagery (blue, green, red, red\_edge, nir, and NDVI) as well as SAR bands (VH and VV).
 
@@ -279,7 +279,7 @@ print('RF Validation Producer\'s accuracy (columns):', testAccuracy.producersAcc
 print('RF Validation array :', testAccuracy.array());
 ```
 
-###  **Export the results to Google Drive**
+### **Export the results to Google Drive**
 
 To complete our analysis, let's **export the results to Google Drive**. We'll start by exporting the classified Sentinel-2 image as a GeoTIFF file.
 
@@ -473,3 +473,7 @@ Export.image.toDrive({
 ```
 
 I hope you found this tutorial helpful! If you did, don't forget to like and subscribe for more content. Until next time, happy coding!
+
+Please consider subscribing to my [**YouTube channel**](https://www.youtube.com/channel/UCpbWlHEqBSnJb6i4UemXQpA?sub_confirmation=1) for future updates.
+
+To access video tutorials and receive a certificate, enrol in my [**Udemy course**](https://www.udemy.com/course/r-for-research/?referralCode=B6DCFDE343F0592EA61A).

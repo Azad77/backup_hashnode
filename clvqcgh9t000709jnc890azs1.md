@@ -3,6 +3,7 @@ title: "Introduction to Deep Learning in R Programming"
 datePublished: Fri May 03 2024 07:19:03 GMT+0000 (Coordinated Universal Time)
 cuid: clvqcgh9t000709jnc890azs1
 slug: introduction-to-deep-learning-in-r-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724478147508/89a13172-9d4c-4982-8b99-fa88ed28508c.png
 tags: artificial-intelligence, deeplearning, rprogramming
 
 ---

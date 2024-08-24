@@ -3,6 +3,7 @@ title: "Enhance the accuracy of crop classification in Google Earth Engine using
 datePublished: Sun May 05 2024 13:43:53 GMT+0000 (Coordinated Universal Time)
 cuid: clvtl33b7000a09jx7svccdbq
 slug: enhance-the-accuracy-of-crop-classification-in-google-earth-engine-using-the-random-forest
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724478075173/16d67b51-121f-4fba-9755-ea86b6f8c9e9.png
 tags: sentinel, random-forest, google-earth-engine
 
 ---

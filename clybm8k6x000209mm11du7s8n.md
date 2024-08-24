@@ -3,6 +3,7 @@ title: "Unlock the Power of R Programming for Research: Join Our Comprehensive U
 datePublished: Sun Jul 07 2024 13:55:24 GMT+0000 (Coordinated Universal Time)
 cuid: clybm8k6x000209mm11du7s8n
 slug: unlock-the-power-of-r-programming-for-research-join-our-comprehensive-udemy-course
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724479363595/c060d7c8-88a3-4149-9a18-8e04b57214e4.png
 tags: programming-blogs, udemy, r-programming
 
 ---

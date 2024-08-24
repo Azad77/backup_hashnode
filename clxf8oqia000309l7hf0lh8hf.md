@@ -3,6 +3,7 @@ title: "Comparison of Different ML Classifiers on Synthetic Dataset"
 datePublished: Fri Jun 14 2024 22:07:26 GMT+0000 (Coordinated Universal Time)
 cuid: clxf8oqia000309l7hf0lh8hf
 slug: comparison-of-different-ml-classifiers-on-synthetic-dataset
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724479581908/4009db5c-a8b3-4113-b38d-d9e0ae97ee58.png
 tags: python, machine-learning, classification
 
 ---

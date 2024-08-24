@@ -3,6 +3,7 @@ title: "Unlock the Power of Programming for Scientific Research with Python and 
 datePublished: Sun Jul 07 2024 14:09:13 GMT+0000 (Coordinated Universal Time)
 cuid: clybmqbwj000208jt4zl89jr2
 slug: unlock-the-power-of-programming-for-scientific-research-with-python-and-r
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724479004848/2e707ca2-3e27-4af4-af09-65e36bc114eb.png
 tags: programming-blogs, python, learning, udemy
 
 ---

@@ -3,6 +3,7 @@ title: "Calculating Common Remote Sensing Indices in Python"
 datePublished: Sun May 12 2024 07:57:50 GMT+0000 (Coordinated Universal Time)
 cuid: clw38t0pp000o0amhbtp05j2r
 slug: calculating-common-remote-sensing-indices-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724479684824/8572af3a-26a4-4650-abfc-66f4ab2f5371.png
 tags: python, index, remotesensing
 
 ---

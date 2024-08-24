@@ -3,6 +3,7 @@ title: "Unlock the Power of Python for Scientific Research with Our Comprehensiv
 datePublished: Sun Jul 07 2024 14:03:29 GMT+0000 (Coordinated Universal Time)
 cuid: clybmiygj00060al3byvf0qf4
 slug: unlock-the-power-of-python-for-scientific-research-with-our-comprehensive-udemy-course
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724478971045/8619ea45-f2e8-4402-9b5f-cf164f8afe3a.png
 tags: programming-blogs, python, python3, udemy
 
 ---

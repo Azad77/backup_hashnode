@@ -3,7 +3,7 @@ title: "12- Scientific computation using NumPy library"
 datePublished: Sun Jun 27 2021 22:26:39 GMT+0000 (Coordinated Universal Time)
 cuid: ckqfrhvsz0p8fgss19ccaev5k
 slug: 12-scientific-computation-using-numpy-library
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1704015122096/305f81bf-5cdb-466f-b49c-efbced960f0b.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724480221475/abe26475-b96f-433c-80a0-ec2f02a1cea6.png
 tags: tutorial, python, programming-languages, numpy
 
 ---

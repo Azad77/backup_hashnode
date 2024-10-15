@@ -27,7 +27,7 @@ all_years_data <- data.frame()
 # Loop through the years 2014 to 2023
 for (year in start_year:end_year) {
   # Import NOAA data for the specific station and year
-  met_data <- importNOAA(code = "406110-99999", year = year)
+  met_data <- importNOAA(code = "406356-99999", year = year)
   
   # Append the data for the current year to the list
   all_years_data <- rbind(all_years_data, met_data)
@@ -40,7 +40,7 @@ windrose <- windRose(all_years_data)
 print(windrose)
 
 # Save the wind rose plot as a PNG file with specified width and height (600x600 pixels)
-png("wind_rose_plot_Pirmam_2014_2023.png", width = 600, height = 600)
+png("wind_rose_plot_Erbil_2014_2023.png", width = 600, height = 600)
 print(windrose)
 dev.off()
 ```
@@ -74,7 +74,7 @@ for (month in 1:12) {
   # Loop through the years in the period
   for (year in start_year:end_year) {
     # Import NOAA data for the specific station and year
-    met_data <- importNOAA(code = "406110-99999", year = year)
+    met_data <- importNOAA(code = "406356-99999", year = year)
     
     # Filter data for the specific month and year
     met_data <- subset(met_data, format(date, "%m") == sprintf("%02d", month))
@@ -99,7 +99,7 @@ for (month in 1:12) {
 
 # Save the wind rose plots as PNG files
 for (month in 1:12) {
-  png(paste("Pirmam_for_period_wind_rose_plot_month_", month, ".png", sep = ""), width = 600, height = 600)
+  png(paste("Erbil_for_period_wind_rose_plot_month_", month, ".png", sep = ""), width = 600, height = 600)
   print(windrose_plots[[month]])
   dev.off()
 }
@@ -140,7 +140,7 @@ for (season_name in names(seasons)) {
   # Loop through the years in the period
   for (year in start_year:end_year) {
     # Import NOAA data for the specific station and year
-    met_data <- importNOAA(code = "406110-99999", year = year)
+    met_data <- importNOAA(code = "406356-99999", year = year)
     
     # Filter data for the specific months of the current season
     met_data_season <- subset(met_data, format(date, "%m") %in% sprintf("%02d", season_months))
@@ -172,7 +172,7 @@ for (season_name in names(seasons)) {
 
 # Save the wind rose plots for each season as PNG files
 for (season_name in names(seasons)) {
-  png(paste("Pirmam_for_period_wind_rose_plot_", season_name, ".png", sep = ""), width = 600, height = 600)
+  png(paste("Erbil_for_period_wind_rose_plot_", season_name, ".png", sep = ""), width = 600, height = 600)
   print(windrose_seasonal_plots[[season_name]])
   dev.off()
 }

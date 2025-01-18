@@ -11,22 +11,22 @@ Learn how to create an admin user in Django with this step-by-step guide. Follow
 
 To create an admin user, run the following command:
 
-```
-pythonCopy codepython manage.py createsuperuser
+```python
+python manage.py createsuperuser
 ```
 
 Enter any username, for example, Azad, and press enter. Then enter your email address, for example, [**azad977@gmail.com**](mailto:azad977@gmail.com). Next, create a password. You should see the following message:
 
-```
-pythonCopy codeSuperuser created successfully.
+```python
+Superuser created successfully.
 ```
 
 Now, open a web browser and go to [**http://127.0.0.1:8000/admin/**](http://127.0.0.1:8000/admin/). You should see the admin login screen. Try logging in with the superuser account you created in the previous step.
 
 To display the poll app on the admin index page, open the polls/admin.py file and edit it to look like this:
 
-```
-pythonCopy codefrom django.contrib import admin
+```python
+from django.contrib import admin
 from .models import Question
 
 admin.site.register(Question)

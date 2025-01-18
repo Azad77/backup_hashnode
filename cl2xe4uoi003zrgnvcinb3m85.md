@@ -23,7 +23,7 @@ In our poll application, we will have the following four views:
 Add the mentioned views to polls/views.py:
 
 ```python
-pythonCopy codefrom django.http import HttpResponse
+from django.http import HttpResponse
 from .models import Question
 
 def index(request):
@@ -45,7 +45,7 @@ def vote(request, question_id):
 Connect these new views into the polls/urls.py by adding the following path() calls:
 
 ```python
-javascriptCopy codefrom django.urls import path
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -63,7 +63,7 @@ urlpatterns = [
 To display the latest 5 poll questions in the system, edit polls/views.py to be:
 
 ```python
-pythonCopy codefrom django.http import HttpResponse
+from django.http import HttpResponse
 from .models import Question
 
 def index(request):

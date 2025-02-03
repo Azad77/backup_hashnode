@@ -20,7 +20,7 @@ Then click "Enter"
 ![Hello My Dear Learner.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1623343634800/Wn_dBLqXm.png align="left")
 
 ```plaintext
-print("My name is 'Your Name'. ")
+print('My name is "Azad Rasul".')
 ```
 
 You can print the output of mathematical operations, for example:
